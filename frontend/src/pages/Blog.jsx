@@ -99,10 +99,10 @@ export default function Blog() {
                 className="group bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-2xl transition-all duration-300"
               >
                 <div className="aspect-video overflow-hidden bg-slate-100">
-                  {item.CoverImage?.url ? (
+                  {/* Ganti bagian <img> lama dengan kode di bawah ini */}
+                  {item.CoverImage?.data?.attributes?.url ? (
                     <img
-                      // Gunakan optional chaining (?.) untuk masuk ke dalam struktur data Strapi
-                      src={`${API_URL}${item.CoverImage?.data?.attributes?.url}`}
+                      src={`${API_URL}${item.CoverImage.data.attributes.url}`}
                       alt={item.Title || "Blog Image"}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
