@@ -15,6 +15,7 @@ export default function Blog() {
   useEffect(() => {
     const fetchArticles = async () => {
       try {
+        // Pada Strapi v5, respons data langsung dapat diakses
         const response = await axios.get(
           `${API_URL.replace(/\/$/, "")}/api/articles?populate=*`,
           {
@@ -23,6 +24,7 @@ export default function Blog() {
             },
           },
         );
+        // Sesuaikan dengan struktur respons API Anda
         setArticles(response.data.data);
       } catch (err) {
         console.error("Error fetching articles:", err);
@@ -32,6 +34,7 @@ export default function Blog() {
     fetchArticles();
   }, []);
 
+  // Filter kategori
   const categories = [
     "Semua",
     ...new Set(articles.map((a) => a.Category || "Lainnya")),
@@ -54,52 +57,11 @@ export default function Blog() {
       <PageHeader title="Berita & Artikel" bgImage={AboutBg} />
 
       <div className="max-w-7xl mx-auto px-8 py-16">
-        <div className="text-center mb-16">
-          <h2 className="text-blue-600 font-bold tracking-widest uppercase text-sm mb-4">
-            Berita & Artikel
-          </h2>
-          <h3 className="text-6xl font-extrabold text-slate-900 mb-6">
-            Informasi Dan Panduan Teknis
-          </h3>
-          <p className="text-slate-600 max-w-2xl mx-auto leading-relaxed">
-            Kami membedah proses manufaktur, regulasi, dan inovasi yang
-            memastikan setiap unit ambulans yang keluar dari pabrik kami siap
-            menjalankan misi penyelamatan nyawa dengan sempurna.
-          </p>
-        </div>
-
-        {/* Filter Kategori */}
-        <div className="flex flex-wrap gap-3 mb-12 justify-center">
-          {categories.map((cat) => (
-            <button
-              key={cat}
-              onClick={() => setSelectedCategory(cat)}
-              className={`px-6 py-2 rounded-full text-sm font-semibold transition-all ${
-                selectedCategory === cat
-                  ? "bg-blue-600 text-white shadow-lg"
-                  : "bg-white text-slate-600 border border-slate-200 hover:border-blue-300"
-              }`}
-            >
-              {cat}
-            </button>
-          ))}
-        </div>
-
         {/* List Artikel */}
         <div className="grid md:grid-cols-3 gap-8">
           {filteredArticles.map((item) => {
-            console.log("ISI DATA ITEM:", item);
-            console.log(
-              "DAFTAR NAMA FIELD DI ATTRIBUTES:",
-              Object.keys(item.attributes),
-            );
-
-            // Ini akan memberitahu kita apakah data gambarnya ada atau null
-            console.log("ISI COVER IMAGE:", item.attributes.CoverImage);
-            const authorName =
-              item.author?.data?.attributes?.username ||
-              item.author?.username ||
-              "Admin";
+            // Akses langsung properti tanpa .attributes
+            const authorName = item.author?.username || "Admin";
 
             return (
               <div
@@ -107,11 +69,11 @@ export default function Blog() {
                 className="group bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-2xl transition-all duration-300"
               >
                 <div className="aspect-video overflow-hidden bg-slate-100">
-                  {/* Gunakan kode di bawah ini */}
-                  {item.attributes?.CoverImage?.data?.attributes?.url ? (
+                  {/* Akses langsung item.CoverImage.url */}
+                  {item.CoverImage?.url ? (
                     <img
-                      src={`${API_URL}${item.attributes.CoverImage.data.attributes.url}`}
-                      alt={item.attributes.Title || "Blog Image"}
+                      src={`${API_URL}${item.CoverImage.url}`}
+                      alt={item.Title || "Blog Image"}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                   ) : (
@@ -130,8 +92,6 @@ export default function Blog() {
                       {item.publishedAt
                         ? new Date(item.publishedAt).toLocaleDateString("id-ID")
                         : "N/A"}
-                      {" • "}
-                      {calculateReadTime(item.Content)} min read
                     </span>
                   </div>
 
