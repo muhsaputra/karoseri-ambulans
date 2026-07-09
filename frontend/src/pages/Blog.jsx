@@ -15,7 +15,7 @@ export default function Blog() {
   useEffect(() => {
     const fetchArticles = async () => {
       try {
-        const response = await axios.get(`${API_URL}/api/articles?populate=*`, {
+        const response = await axios.get(`${API_URL}api/articles?populate=*`, {
           headers: {
             Authorization: `Bearer ${API_TOKEN}`,
           },
