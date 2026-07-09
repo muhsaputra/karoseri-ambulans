@@ -101,7 +101,8 @@ export default function Blog() {
                 <div className="aspect-video overflow-hidden bg-slate-100">
                   {item.CoverImage?.url ? (
                     <img
-                      src={`${API_URL}${item.CoverImage.url}`}
+                      // Gunakan optional chaining (?.) untuk masuk ke dalam struktur data Strapi
+                      src={`${API_URL}${item.CoverImage?.data?.attributes?.url}`}
                       alt={item.Title || "Blog Image"}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
