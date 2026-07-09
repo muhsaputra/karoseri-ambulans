@@ -89,6 +89,13 @@ export default function Blog() {
         <div className="grid md:grid-cols-3 gap-8">
           {filteredArticles.map((item) => {
             console.log("ISI DATA ITEM:", item);
+            console.log(
+              "DAFTAR NAMA FIELD DI ATTRIBUTES:",
+              Object.keys(item.attributes),
+            );
+
+            // Ini akan memberitahu kita apakah data gambarnya ada atau null
+            console.log("ISI COVER IMAGE:", item.attributes.CoverImage);
             const authorName =
               item.author?.data?.attributes?.username ||
               item.author?.username ||
