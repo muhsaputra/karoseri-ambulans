@@ -88,6 +88,7 @@ export default function Blog() {
         {/* List Artikel */}
         <div className="grid md:grid-cols-3 gap-8">
           {filteredArticles.map((item) => {
+            console.log("ISI DATA ITEM:", item);
             const authorName =
               item.author?.data?.attributes?.username ||
               item.author?.username ||
