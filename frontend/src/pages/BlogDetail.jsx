@@ -102,7 +102,10 @@ export default function BlogDetail() {
       .catch((err) => {
         console.error("Error Detail:", err.response?.status || err.message);
         if (import.meta.env.DEV) {
-          console.debug("CMS /api/articles (detail) error:", err.response?.data || err);
+          console.debug(
+            "CMS /api/articles (detail) error:",
+            err.response?.data || err,
+          );
         }
         setError(true);
         setLoading(false);
