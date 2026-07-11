@@ -17,9 +17,16 @@ export default function Blog() {
       try {
         const response = await cms.get("/api/articles", {
           params: {
-            populate: "author,CoverImage",
+            populate: {
+              author: "*",
+              CoverImage: "*",
+            },
           },
         });
+
+        if (import.meta.env.DEV) {
+          console.debug("CMS /api/articles response:", response.data);
+        }
 
         setArticles(response.data.data);
       } catch (err) {
@@ -52,11 +59,15 @@ export default function Blog() {
   };
 
   const getAuthorName = (item) => {
+    const authorField = item?.author || item?.attributes?.author;
+    const author = authorField?.data?.attributes || authorField;
+
     return (
-      item?.author?.username ||
-      item?.author?.data?.attributes?.username ||
-      item?.attributes?.author?.data?.attributes?.username ||
-      item?.attributes?.author?.username ||
+      author?.username ||
+      author?.name ||
+      author?.displayName ||
+      author?.fullName ||
+      author?.email ||
       item?.authorName ||
       "Admin"
     );

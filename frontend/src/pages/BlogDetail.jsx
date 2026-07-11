@@ -40,11 +40,15 @@ export default function BlogDetail() {
   };
 
   const getAuthorName = (item) => {
+    const authorField = item?.author || item?.attributes?.author;
+    const author = authorField?.data?.attributes || authorField;
+
     return (
-      item?.author?.username ||
-      item?.author?.data?.attributes?.username ||
-      item?.attributes?.author?.data?.attributes?.username ||
-      item?.attributes?.author?.username ||
+      author?.username ||
+      author?.name ||
+      author?.displayName ||
+      author?.fullName ||
+      author?.email ||
       item?.authorName ||
       "Admin"
     );
@@ -87,7 +91,10 @@ export default function BlogDetail() {
       .get("/api/articles", {
         params: {
           "filters[Slug][$eq]": slug,
-          populate: "author,CoverImage",
+          populate: {
+            author: "*",
+            CoverImage: "*",
+          },
         },
       })
       .then((res) => {
