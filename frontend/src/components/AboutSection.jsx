@@ -5,11 +5,6 @@ import AboutImage from "../assets/workshop-ambulans.webp";
 
 const FEATURES = [
   {
-    icon: LuShieldCheck,
-    title: "Sertifikasi Kemenkes",
-    desc: "Setiap unit telah memenuhi standar keamanan medis nasional.",
-  },
-  {
     icon: LuAward,
     title: "Pengalaman 10+ Tahun",
     desc: "Keahlian manufaktur yang teruji dalam ribuan proyek ambulans.",
