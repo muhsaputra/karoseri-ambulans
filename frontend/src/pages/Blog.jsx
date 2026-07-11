@@ -15,23 +15,17 @@ export default function Blog() {
   useEffect(() => {
     const fetchArticles = async () => {
       try {
-        // Gunakan string untuk menghindari error encoding 400
-        // "*,author" artinya: ambil semua field dasar, DAN ambil relasi author
         const response = await cms.get("/api/articles", {
           params: {
-            populate: "*,author",
+            // Menggunakan objek akan mencegah error 400
+            populate: {
+              CoverImage: true,
+              author: true,
+            },
           },
         });
 
         setArticles(response.data.data);
-
-        // Debugging
-        if (response.data.data.length > 0) {
-          console.log(
-            "Struktur Artikel Berhasil Dimuat:",
-            response.data.data[0],
-          );
-        }
       } catch (err) {
         console.error("Error fetching articles:", err.message);
         setError(true);
@@ -39,6 +33,7 @@ export default function Blog() {
         setLoading(false);
       }
     };
+
     fetchArticles();
   }, []);
 
