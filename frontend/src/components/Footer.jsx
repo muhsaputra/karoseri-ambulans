@@ -80,14 +80,15 @@ const Footer = () => {
             </h4>
             <ul className="space-y-4 text-sm">
               <li className="flex items-start gap-3">
-                <MdLocationOn className="mt-1 text-red-500" /> Serang, Banten,
-                Indonesia
+                <MdLocationOn className="mt-1 text-red-500" /> Komp. Taman
+                Banten Lestari Serang, Banten
               </li>
               <li className="flex items-center gap-3">
-                <MdPhone className="text-red-500" /> +62 812 3456 7890
+                <MdPhone className="text-red-500" /> +62 811-1222-183
               </li>
               <li className="flex items-center gap-3">
-                <MdEmail className="text-red-500" /> halo@karoseri.com
+                <MdEmail className="text-red-500" />{" "}
+                karoseriambulans16@gmail.com
               </li>
             </ul>
           </div>

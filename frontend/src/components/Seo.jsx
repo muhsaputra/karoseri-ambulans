@@ -13,7 +13,12 @@ export default function Seo({ title, description = DEFAULT_DESCRIPTION }) {
     description,
     areaServed: "Indonesia",
     telephone: "+62-812-3456-7890",
-    address: { "@type": "PostalAddress", addressLocality: "Serang", addressRegion: "Banten", addressCountry: "ID" },
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Serang",
+      addressRegion: "Banten",
+      addressCountry: "ID",
+    },
   };
 
   return (

@@ -3,7 +3,7 @@ import { SiWhatsapp } from "react-icons/si";
 export default function FloatingChat() {
   return (
     <a
-      href="https://wa.me/6281234567890" // Ganti dengan nomor Anda
+      href="https://wa.me/628111222183" // Ganti dengan nomor Anda
       target="_blank"
       rel="noopener noreferrer"
       className="fixed bottom-8 right-8 z-50 group"
