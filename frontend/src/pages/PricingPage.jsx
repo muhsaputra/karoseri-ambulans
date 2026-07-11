@@ -81,6 +81,7 @@ const FAQS = [
     "Apakah harga sudah termasuk kendaraan?",
     "Estimasi menyesuaikan skema pengadaan yang dipilih. Tim kami akan menjelaskan komponen kendaraan dan karoseri dalam quotation formal.",
   ],
+
   [
     "Bisakah spesifikasi disesuaikan dengan anggaran?",
     "Bisa. Kami membantu menyusun prioritas kebutuhan medis, konfigurasi interior, dan opsi alat agar sesuai target anggaran Anda.",
