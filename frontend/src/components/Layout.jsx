@@ -1,7 +1,9 @@
 // src/components/Layout.jsx
+import { Suspense, lazy } from "react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-import FloatingChat from "./FloatingChat";
+
+const FloatingChat = lazy(() => import("./FloatingChat"));
 
 const Layout = ({ children }) => {
   return (
@@ -9,7 +11,9 @@ const Layout = ({ children }) => {
       <Navbar />
       <main className="flex-grow">{children}</main>
       <Footer />
-      <FloatingChat /> {/* 2. Letakkan di sini */}
+      <Suspense fallback={null}>
+        <FloatingChat />
+      </Suspense>
     </div>
   );
 };

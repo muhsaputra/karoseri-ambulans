@@ -271,6 +271,7 @@ export default function BlogDetail() {
                 <img
                   src={getMediaUrl(article.CoverImage.url)}
                   alt={article.Title}
+                  loading="lazy"
                   className="h-80 w-full object-cover sm:h-105"
                 />
               </div>

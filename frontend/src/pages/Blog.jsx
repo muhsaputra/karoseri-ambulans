@@ -204,6 +204,7 @@ export default function Blog() {
                       <img
                         src={getMediaUrl(item.CoverImage.url)}
                         alt={item.Title || "Blog Image"}
+                        loading="lazy"
                         className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                       />
                     ) : (
