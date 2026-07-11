@@ -17,11 +17,7 @@ export default function Blog() {
       try {
         const response = await cms.get("/api/articles", {
           params: {
-            // Menggunakan objek akan mencegah error 400
-            populate: {
-              CoverImage: true,
-              author: true,
-            },
+            populate: "author,CoverImage",
           },
         });
 
