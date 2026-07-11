@@ -21,11 +21,22 @@ export default function Blog() {
         });
         // Sesuaikan dengan struktur respons API Anda
         setArticles(response.data.data);
+        if (import.meta.env.DEV) {
+          // Development-only logging to inspect API shape
+          // Open browser console to view: 'CMS /api/articles response'
+          console.debug("CMS /api/articles response:", response.data);
+        }
       } catch (err) {
         console.error(
           "Error fetching articles:",
           err.response?.status || err.message,
         );
+        if (import.meta.env.DEV) {
+          console.debug(
+            "CMS /api/articles error response:",
+            err.response?.data || err,
+          );
+        }
         setError(true);
       } finally {
         setLoading(false);

@@ -91,6 +91,9 @@ export default function BlogDetail() {
         },
       })
       .then((res) => {
+        if (import.meta.env.DEV) {
+          console.debug("CMS /api/articles (detail) response:", res.data);
+        }
         if (res.data.data && res.data.data.length > 0) {
           setArticle(res.data.data[0]);
         }
@@ -98,6 +101,9 @@ export default function BlogDetail() {
       })
       .catch((err) => {
         console.error("Error Detail:", err.response?.status || err.message);
+        if (import.meta.env.DEV) {
+          console.debug("CMS /api/articles (detail) error:", err.response?.data || err);
+        }
         setError(true);
         setLoading(false);
       });
