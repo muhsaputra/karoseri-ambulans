@@ -144,7 +144,6 @@ const Home = () => {
               </div>
             </div>
           </section>
-          <FAQSection />
           <RequestQuoteSection />
         </Suspense>
       </main>

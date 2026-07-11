@@ -4,11 +4,11 @@ import { Link } from "react-router-dom";
 
 const STATS = [
   {
-    value: "500+",
+    value: "100+",
     label: "Unit ambulans telah beroperasi di seluruh Indonesia.",
   },
   { value: "100%", label: "Kepatuhan standar keamanan medis & Kemenkes." },
-  { value: "15+", label: "Tahun keahlian manufaktur karoseri khusus medis." },
+  { value: "10+", label: "Tahun keahlian manufaktur karoseri khusus medis." },
 ];
 
 // --- VARIANT ANIMASI ---
