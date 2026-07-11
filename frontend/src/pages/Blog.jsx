@@ -53,6 +53,17 @@ export default function Blog() {
     return Math.ceil(text.length / 1000);
   };
 
+  const getAuthorName = (item) => {
+    return (
+      item?.author?.username ||
+      item?.author?.data?.attributes?.username ||
+      item?.attributes?.author?.data?.attributes?.username ||
+      item?.attributes?.author?.username ||
+      item?.authorName ||
+      "Admin"
+    );
+  };
+
   const totalCategories = Math.max(categories.length - 1, 0);
   const sortedArticles = [...filteredArticles].sort((a, b) => {
     const dateA = a.publishedAt ? new Date(a.publishedAt).getTime() : 0;
@@ -69,7 +80,7 @@ export default function Blog() {
       <PageHeader title="Berita & Artikel" bgImage={AboutBg} />
 
       <div className="mx-auto max-w-7xl px-5 py-10 sm:px-8 lg:py-16">
-        <div className="mb-8 overflow-hidden rounded-4xl border border-slate-200 bg-gradient-to-br from-[#071b3b] via-[#0f2b5b] to-[#1f4a8a] p-8 text-white shadow-[0_20px_60px_-20px_rgba(7,27,59,0.35)] sm:p-10 lg:p-12">
+        <div className="mb-8 overflow-hidden rounded-4xl border border-slate-200 bg-linear-to-br from-[#071b3b] via-[#0f2b5b] to-[#1f4a8a] p-8 text-white shadow-[0_20px_60px_-20px_rgba(7,27,59,0.35)] sm:p-10 lg:p-12">
           <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
             <div>
               <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-sm font-semibold backdrop-blur">
@@ -175,7 +186,7 @@ export default function Blog() {
         {!loading && !error && sortedArticles.length > 0 && (
           <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
             {sortedArticles.map((item) => {
-              const authorName = item.author?.username || "Admin";
+              const authorName = getAuthorName(item);
 
               return (
                 <article

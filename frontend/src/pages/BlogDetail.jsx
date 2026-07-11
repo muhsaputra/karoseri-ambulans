@@ -39,6 +39,17 @@ export default function BlogDetail() {
     return Math.ceil(words / wordsPerMinute);
   };
 
+  const getAuthorName = (item) => {
+    return (
+      item?.author?.username ||
+      item?.author?.data?.attributes?.username ||
+      item?.attributes?.author?.data?.attributes?.username ||
+      item?.attributes?.author?.username ||
+      item?.authorName ||
+      "Admin"
+    );
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       const totalScroll = document.documentElement.scrollTop;
@@ -222,16 +233,16 @@ export default function BlogDetail() {
 
             <div className="mt-8 flex flex-wrap items-center gap-4 border-y border-slate-200 py-5">
               <div className="flex h-12 w-12 items-center justify-center rounded-full bg-red-600 font-bold text-white shadow-md">
-                {article.author?.username?.charAt(0).toUpperCase() || "A"}
+                {getAuthorName(article)?.charAt(0).toUpperCase() || "A"}
               </div>
               <div>
                 <p className="font-bold text-slate-900">
-                  {article.author?.username || "Admin"}
+                  {getAuthorName(article) || "Admin"}
                 </p>
                 <div className="mt-1 flex flex-wrap items-center gap-2 text-sm text-slate-500">
                   <span className="inline-flex items-center gap-2">
                     <FaUser className="text-red-500" />
-                    {article.author?.username || "Admin"}
+                    {getAuthorName(article) || "Admin"}
                   </span>
                   <span>•</span>
                   <span className="inline-flex items-center gap-2">

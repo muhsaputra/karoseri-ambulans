@@ -76,19 +76,19 @@ const IntroSection = () => (
 const ComplianceSection = () => (
   <section className="my-8 border-y border-slate-100 bg-white py-8">
     <div className="mx-auto flex max-w-6xl flex-wrap justify-center gap-x-10 gap-y-5 px-5 md:gap-x-14">
-    {[
-      { label: "Tersertifikasi Kemenkes", icon: MdShield },
-      { label: "Standar ISO 9001", icon: MdCheckCircle },
-      { label: "Material Anti-Bakteri", icon: MdLocalShipping },
-      { label: "Garansi 2 Tahun", icon: MdSpeed },
-    ].map((item, idx) => (
-      <div
-        key={idx}
-        className="flex items-center gap-2 text-slate-500 font-medium text-sm"
-      >
-        <item.icon className="text-red-600 text-lg" /> {item.label}
-      </div>
-    ))}
+      {[
+        { label: "Tersertifikasi Kemenkes", icon: MdShield },
+        { label: "Standar ISO 9001", icon: MdCheckCircle },
+        { label: "Material Anti-Bakteri", icon: MdLocalShipping },
+        { label: "Garansi 2 Tahun", icon: MdSpeed },
+      ].map((item, idx) => (
+        <div
+          key={idx}
+          className="flex items-center gap-2 text-slate-500 font-medium text-sm"
+        >
+          <item.icon className="text-red-600 text-lg" /> {item.label}
+        </div>
+      ))}
     </div>
   </section>
 );
@@ -113,21 +113,26 @@ export default function ProductPage() {
       <div className="mx-auto max-w-7xl px-5 pb-20 sm:px-8">
         {/* Filter Bar */}
         <div className="mb-12 flex flex-col items-center justify-between gap-5 border-b border-slate-200 pb-8 md:flex-row">
-          <p className="text-sm font-medium text-slate-500"><span className="font-bold text-[#071b3b]">{filteredProducts.length}</span> pilihan unit tersedia</p>
+          <p className="text-sm font-medium text-slate-500">
+            <span className="font-bold text-[#071b3b]">
+              {filteredProducts.length}
+            </span>{" "}
+            pilihan unit tersedia
+          </p>
           <div className="flex flex-wrap justify-center gap-2 rounded-2xl bg-white p-2 shadow-sm ring-1 ring-slate-200">
-          {CATEGORIES.map((cat) => (
-            <button
-              key={cat}
-              onClick={() => setActiveCategory(cat)}
-              className={`rounded-xl px-5 py-2.5 text-sm font-bold transition-all duration-300 ${
-                activeCategory === cat
-                  ? "bg-red-600 text-white shadow-lg shadow-red-600/20"
-                  : "text-slate-600 hover:bg-red-50 hover:text-red-600"
-              }`}
-            >
-              {cat}
-            </button>
-          ))}
+            {CATEGORIES.map((cat) => (
+              <button
+                key={cat}
+                onClick={() => setActiveCategory(cat)}
+                className={`rounded-xl px-5 py-2.5 text-sm font-bold transition-all duration-300 ${
+                  activeCategory === cat
+                    ? "bg-red-600 text-white shadow-lg shadow-red-600/20"
+                    : "text-slate-600 hover:bg-red-50 hover:text-red-600"
+                }`}
+              >
+                {cat}
+              </button>
+            ))}
           </div>
         </div>
 
@@ -168,7 +173,10 @@ export default function ProductPage() {
                   </p>
                   <div className="mb-6 flex items-start gap-2 rounded-xl bg-slate-50 p-3 text-sm text-slate-600">
                     <MdPeople className="mt-0.5 shrink-0 text-red-600" />
-                    <span><strong className="text-[#071b3b]">Ideal untuk:</strong> {product.idealFor}</span>
+                    <span>
+                      <strong className="text-[#071b3b]">Ideal untuk:</strong>{" "}
+                      {product.idealFor}
+                    </span>
                   </div>
 
                   <div className="flex flex-wrap gap-2 mb-8">
@@ -183,8 +191,18 @@ export default function ProductPage() {
                   </div>
 
                   <div className="grid grid-cols-2 gap-3">
-                    <button onClick={() => setSelectedProduct(product)} className="rounded-2xl border border-slate-200 py-3.5 text-sm font-bold text-[#071b3b] transition-colors hover:border-red-300 hover:text-red-600">Detail unit</button>
-                    <a href={`https://wa.me/6281234567890?text=Halo%20Karoseri%20Ambulans%2C%20saya%20tertarik%20dengan%20${encodeURIComponent(product.title)}.`} target="_blank" rel="noreferrer" className="flex items-center justify-center gap-1 rounded-2xl bg-[#071b3b] py-3.5 text-sm font-bold text-white transition-all hover:bg-red-600">
+                    <button
+                      onClick={() => setSelectedProduct(product)}
+                      className="rounded-2xl border border-slate-200 py-3.5 text-sm font-bold text-[#071b3b] transition-colors hover:border-red-300 hover:text-red-600"
+                    >
+                      Detail unit
+                    </button>
+                    <a
+                      href={`https://wa.me/6281234567890?text=Halo%20Karoseri%20Ambulans%2C%20saya%20tertarik%20dengan%20${encodeURIComponent(product.title)}.`}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="flex items-center justify-center gap-1 rounded-2xl bg-[#071b3b] py-3.5 text-sm font-bold text-white transition-all hover:bg-red-600"
+                    >
                       Konsultasi <MdArrowForward />
                     </a>
                   </div>
@@ -198,19 +216,42 @@ export default function ProductPage() {
       <section className="bg-white px-5 py-24 sm:px-8">
         <div className="mx-auto max-w-7xl">
           <div className="mb-12 max-w-2xl">
-            <p className="mb-3 text-sm font-bold uppercase tracking-[0.2em] text-red-600">Memilih unit yang tepat</p>
-            <h2 className="text-4xl font-bold tracking-tight text-[#071b3b]">Mulai dari kebutuhan operasional, bukan sekadar tipe unit.</h2>
+            <p className="mb-3 text-sm font-bold uppercase tracking-[0.2em] text-red-600">
+              Memilih unit yang tepat
+            </p>
+            <h2 className="text-4xl font-bold tracking-tight text-[#071b3b]">
+              Mulai dari kebutuhan operasional, bukan sekadar tipe unit.
+            </h2>
           </div>
           <div className="grid gap-5 md:grid-cols-3">
             {[
-              [MdDirectionsCar, "Rute dan frekuensi", "Tentukan pola penggunaan unit: rujukan rutin, respons darurat, atau layanan intensif."],
-              [MdPeople, "Komposisi kru", "Susun kebutuhan ruang kerja bagi dokter, perawat, pengemudi, dan pendamping pasien."],
-              [MdMonitorHeart, "Tingkat dukungan medis", "Pilih konfigurasi peralatan berdasarkan standar layanan dan protokol fasilitas Anda."],
+              [
+                MdDirectionsCar,
+                "Rute dan frekuensi",
+                "Tentukan pola penggunaan unit: rujukan rutin, respons darurat, atau layanan intensif.",
+              ],
+              [
+                MdPeople,
+                "Komposisi kru",
+                "Susun kebutuhan ruang kerja bagi dokter, perawat, pengemudi, dan pendamping pasien.",
+              ],
+              [
+                MdMonitorHeart,
+                "Tingkat dukungan medis",
+                "Pilih konfigurasi peralatan berdasarkan standar layanan dan protokol fasilitas Anda.",
+              ],
             ].map(([Icon, title, desc]) => (
-              <article key={title} className="rounded-3xl border border-slate-200 bg-slate-50 p-7">
+              <article
+                key={title}
+                className="rounded-3xl border border-slate-200 bg-slate-50 p-7"
+              >
                 <Icon className="text-3xl text-red-600" />
-                <h3 className="mt-8 text-xl font-bold text-[#071b3b]">{title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-slate-600">{desc}</p>
+                <h3 className="mt-8 text-xl font-bold text-[#071b3b]">
+                  {title}
+                </h3>
+                <p className="mt-3 text-sm leading-relaxed text-slate-600">
+                  {desc}
+                </p>
               </article>
             ))}
           </div>
@@ -228,25 +269,87 @@ export default function ProductPage() {
           kelistrikan, dan sistem medis sesuai kebutuhan operasional rumah sakit
           Anda.
         </p>
-        <a href="https://wa.me/6281234567890?text=Halo%20Karoseri%20Ambulans%2C%20saya%20ingin%20konsultasi%20Custom%20Build." target="_blank" rel="noreferrer" className="inline-flex rounded-full bg-red-600 px-10 py-4 font-bold shadow-lg shadow-red-950/30 transition-all hover:scale-105 hover:bg-red-500">
+        <a
+          href="https://wa.me/6281234567890?text=Halo%20Karoseri%20Ambulans%2C%20saya%20ingin%20konsultasi%20Custom%20Build."
+          target="_blank"
+          rel="noreferrer"
+          className="inline-flex rounded-full bg-red-600 px-10 py-4 font-bold shadow-lg shadow-red-950/30 transition-all hover:scale-105 hover:bg-red-500"
+        >
           Konsultasi Custom Build
         </a>
       </section>
 
       <AnimatePresence>
         {selectedProduct && (
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} onClick={() => setSelectedProduct(null)} className="fixed inset-0 z-[70] flex items-end bg-[#071b3b]/70 p-3 backdrop-blur-sm md:items-center md:justify-center md:p-6">
-            <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 24 }} onClick={(event) => event.stopPropagation()} className="relative w-full max-w-3xl overflow-hidden rounded-3xl bg-white shadow-2xl">
-              <button onClick={() => setSelectedProduct(null)} aria-label="Tutup detail unit" className="absolute right-4 top-4 z-10 rounded-full bg-white/90 p-2 text-[#071b3b] shadow-lg"><MdClose className="text-xl" /></button>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setSelectedProduct(null)}
+            className="fixed inset-0 z-[70] flex items-end bg-[#071b3b]/70 p-3 backdrop-blur-sm md:items-center md:justify-center md:p-6"
+          >
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 24 }}
+              onClick={(event) => event.stopPropagation()}
+              className="relative w-full max-w-3xl overflow-hidden rounded-3xl bg-white shadow-2xl"
+            >
+              <button
+                onClick={() => setSelectedProduct(null)}
+                aria-label="Tutup detail unit"
+                className="absolute right-4 top-4 z-10 rounded-full bg-white/90 p-2 text-[#071b3b] shadow-lg"
+              >
+                <MdClose className="text-xl" />
+              </button>
               <div className="grid md:grid-cols-2">
-                <img src={selectedProduct.image} alt={selectedProduct.title} className="h-64 w-full object-cover md:h-full" />
+                <img
+                  src={selectedProduct.image}
+                  alt={selectedProduct.title}
+                  className="h-64 w-full object-cover md:h-full"
+                />
                 <div className="p-7 md:p-9">
-                  <p className="text-xs font-bold uppercase tracking-[0.18em] text-red-600">{selectedProduct.category}</p>
-                  <h2 className="mt-3 text-3xl font-bold text-[#071b3b]">{selectedProduct.title}</h2>
-                  <p className="mt-4 leading-relaxed text-slate-600">{selectedProduct.desc}</p>
-                  <dl className="my-6 grid grid-cols-2 gap-3 text-sm"><div className="rounded-xl bg-slate-50 p-3"><dt className="text-slate-500">Kapasitas</dt><dd className="mt-1 font-bold text-[#071b3b]">{selectedProduct.capacity}</dd></div><div className="rounded-xl bg-slate-50 p-3"><dt className="text-slate-500">Pengerjaan</dt><dd className="mt-1 font-bold text-[#071b3b]">{selectedProduct.leadTime}</dd></div></dl>
-                  <div className="space-y-2 border-t border-slate-100 pt-5">{selectedProduct.specs.map((spec) => <p key={spec} className="flex items-center gap-2 text-sm font-medium text-slate-700"><MdCheckCircle className="text-red-600" /> {spec}</p>)}</div>
-                  <a href={`https://wa.me/6281234567890?text=Halo%20Karoseri%20Ambulans%2C%20saya%20ingin%20mendiskusikan%20${encodeURIComponent(selectedProduct.title)}.`} target="_blank" rel="noreferrer" className="mt-7 flex items-center justify-center gap-2 rounded-xl bg-red-600 py-3.5 font-bold text-white transition-colors hover:bg-red-700">Diskusikan unit ini <MdArrowOutward /></a>
+                  <p className="text-xs font-bold uppercase tracking-[0.18em] text-red-600">
+                    {selectedProduct.category}
+                  </p>
+                  <h2 className="mt-3 text-3xl font-bold text-[#071b3b]">
+                    {selectedProduct.title}
+                  </h2>
+                  <p className="mt-4 leading-relaxed text-slate-600">
+                    {selectedProduct.desc}
+                  </p>
+                  <dl className="my-6 grid grid-cols-2 gap-3 text-sm">
+                    <div className="rounded-xl bg-slate-50 p-3">
+                      <dt className="text-slate-500">Kapasitas</dt>
+                      <dd className="mt-1 font-bold text-[#071b3b]">
+                        {selectedProduct.capacity}
+                      </dd>
+                    </div>
+                    <div className="rounded-xl bg-slate-50 p-3">
+                      <dt className="text-slate-500">Pengerjaan</dt>
+                      <dd className="mt-1 font-bold text-[#071b3b]">
+                        {selectedProduct.leadTime}
+                      </dd>
+                    </div>
+                  </dl>
+                  <div className="space-y-2 border-t border-slate-100 pt-5">
+                    {selectedProduct.specs.map((spec) => (
+                      <p
+                        key={spec}
+                        className="flex items-center gap-2 text-sm font-medium text-slate-700"
+                      >
+                        <MdCheckCircle className="text-red-600" /> {spec}
+                      </p>
+                    ))}
+                  </div>
+                  <a
+                    href={`https://wa.me/6281234567890?text=Halo%20Karoseri%20Ambulans%2C%20saya%20ingin%20mendiskusikan%20${encodeURIComponent(selectedProduct.title)}.`}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="mt-7 flex items-center justify-center gap-2 rounded-xl bg-red-600 py-3.5 font-bold text-white transition-colors hover:bg-red-700"
+                  >
+                    Diskusikan unit ini <MdArrowOutward />
+                  </a>
                 </div>
               </div>
             </motion.div>
