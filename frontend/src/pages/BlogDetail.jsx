@@ -114,7 +114,7 @@ export default function BlogDetail() {
       <div className="min-h-screen bg-slate-50">
         <PageHeader title="Berita & Artikel" bgImage={AboutBg} />
         <div className="mx-auto flex min-h-[70vh] max-w-3xl items-center justify-center px-6 py-16 text-center">
-          <div className="w-full rounded-[32px] border border-slate-200 bg-white p-8 shadow-sm sm:p-10">
+          <div className="w-full rounded-4xl border border-slate-200 bg-white p-8 shadow-sm sm:p-10">
             <h1 className="text-2xl font-bold text-[#071b3b]">
               Artikel belum dapat dimuat
             </h1>
@@ -139,7 +139,7 @@ export default function BlogDetail() {
       <div className="min-h-screen bg-slate-50">
         <PageHeader title="Berita & Artikel" bgImage={AboutBg} />
         <div className="mx-auto flex min-h-[70vh] max-w-3xl items-center justify-center px-6 py-16 text-center">
-          <div className="w-full rounded-[32px] border border-slate-200 bg-white p-8 shadow-sm sm:p-10">
+          <div className="w-full rounded-4xl border border-slate-200 bg-white p-8 shadow-sm sm:p-10">
             <h1 className="text-2xl font-bold text-[#071b3b]">
               Artikel tidak ditemukan
             </h1>
