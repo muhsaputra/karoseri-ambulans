@@ -15,18 +15,21 @@ export default function Blog() {
   useEffect(() => {
     const fetchArticles = async () => {
       try {
-        // Gunakan string '*' agar Strapi mengambil semua relasi standar
+        // Kita gunakan objek populate agar Strapi dipaksa menarik relasi 'author'
         const response = await cms.get("/api/articles", {
           params: {
-            populate: "*",
+            populate: {
+              CoverImage: "*",
+              author: "*", // <--- Ini yang krusial
+            },
           },
         });
 
         setArticles(response.data.data);
 
-        // Debugging untuk melihat nama field yang benar
+        // Debugging untuk melihat apakah author sekarang muncul
         if (response.data.data.length > 0) {
-          console.log("Struktur Artikel Pertama:", response.data.data[0]);
+          console.log("Struktur Artikel Baru:", response.data.data[0]);
         }
       } catch (err) {
         console.error("Error fetching articles:", err.message);
