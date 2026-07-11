@@ -91,10 +91,7 @@ export default function BlogDetail() {
       .get("/api/articles", {
         params: {
           "filters[Slug][$eq]": slug,
-          populate: {
-            author: "*",
-            CoverImage: "*",
-          },
+          populate: "author,CoverImage",
         },
       })
       .then((res) => {

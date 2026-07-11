@@ -17,10 +17,7 @@ export default function Blog() {
       try {
         const response = await cms.get("/api/articles", {
           params: {
-            populate: {
-              author: "*",
-              CoverImage: "*",
-            },
+            populate: "author,CoverImage",
           },
         });
 
