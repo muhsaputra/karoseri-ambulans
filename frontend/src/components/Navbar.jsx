@@ -51,7 +51,7 @@ const Navbar = () => {
               <img
                 src="/favicon.svg"
                 alt="Karoseri Ambulans"
-                className="h-10 w-10"
+                className="h-25 w-25"
               />
             </span>
             <span className="text-base font-bold tracking-tight sm:text-lg">
