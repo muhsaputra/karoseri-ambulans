@@ -11,7 +11,7 @@ const FEATURES = [
   },
   {
     icon: LuAward,
-    title: "Pengalaman 15+ Tahun",
+    title: "Pengalaman 10+ Tahun",
     desc: "Keahlian manufaktur yang teruji dalam ribuan proyek ambulans.",
   },
   {
@@ -45,7 +45,7 @@ export default function AboutSection() {
               Dedikasi untuk Nyawa di <br /> Setiap Inci Kendaraan
             </h3>
             <p className="text-lg text-slate-600 mb-8 leading-relaxed">
-              Selama lebih dari 15 tahun, kami telah menjadi mitra tepercaya
+              Selama lebih dari 10 tahun, kami telah menjadi mitra tepercaya
               dalam manufaktur kendaraan medis. Kami memahami bahwa dalam
               situasi gawat darurat, setiap detik sangat berharga. Itulah
               sebabnya setiap unit yang kami rakit mengutamakan presisi,
@@ -84,7 +84,7 @@ export default function AboutSection() {
             {/* Decorative Overlay */}
             <div className="absolute inset-0 bg-[#071b3b]/25" />
             <div className="absolute bottom-8 left-8 bg-white p-6 rounded-2xl shadow-xl max-w-[250px]">
-              <p className="text-3xl font-bold text-red-600">500+</p>
+              <p className="text-3xl font-bold text-red-600">100+</p>
               <p className="text-sm font-medium text-slate-600">
                 Unit Beroperasi di Seluruh Nusantara
               </p>

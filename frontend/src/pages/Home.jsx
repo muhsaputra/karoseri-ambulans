@@ -98,7 +98,7 @@ const Home = () => {
           </section>
           <ProductSection />
           <PortfolioSection />
-          <SocialProofSection />
+          {/* <SocialProofSection /> */}
           <section className="border-y border-slate-100 bg-slate-50 py-20 px-5 sm:px-8">
             <div className="max-w-7xl mx-auto">
               <div className="text-center mb-16">

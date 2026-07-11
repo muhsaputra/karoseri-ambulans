@@ -8,13 +8,13 @@ export default function TrustSection() {
           <p className="text-sm text-slate-600 font-medium">Tahun Pengalaman</p>
         </div>
         <div className="text-center">
-          <p className="text-3xl font-extrabold text-red-600">500+</p>
+          <p className="text-3xl font-extrabold text-red-600">100+</p>
           <p className="text-sm text-slate-600 font-medium">Unit Terkirim</p>
         </div>
-        <div className="text-center">
+        {/* <div className="text-center">
           <p className="text-3xl font-extrabold text-[#071b3b]">ISO</p>
           <p className="text-sm text-slate-600 font-medium">Standar Kualitas</p>
-        </div>
+        </div> */}
         <div className="text-center">
           <p className="text-3xl font-extrabold text-[#071b3b]">24/7</p>
           <p className="text-sm text-slate-600 font-medium">Dukungan Teknis</p>
