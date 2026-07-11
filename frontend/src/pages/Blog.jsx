@@ -15,16 +15,25 @@ export default function Blog() {
   useEffect(() => {
     const fetchArticles = async () => {
       try {
-        // Pada Strapi v5, respons data langsung dapat diakses
+        // Kita gunakan objek populate agar Strapi dipaksa menarik relasi 'author'
         const response = await cms.get("/api/articles", {
-          params: { populate: "*" },
+          params: {
+            populate: {
+              "*": true, // Mengambil semua field standar
+              author: "*", // Memaksa mengambil relasi author
+            },
+          },
         });
+
         // Sesuaikan dengan struktur respons API Anda
         setArticles(response.data.data);
+
         if (import.meta.env.DEV) {
-          // Development-only logging to inspect API shape
-          // Open browser console to view: 'CMS /api/articles response'
           console.debug("CMS /api/articles response:", response.data);
+          // Cek apakah data author muncul di console
+          if (response.data.data.length > 0) {
+            console.debug("Contoh data artikel:", response.data.data[0]);
+          }
         }
       } catch (err) {
         console.error(
