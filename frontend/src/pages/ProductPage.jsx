@@ -19,7 +19,7 @@ import Seo from "../components/Seo";
 
 const PRODUCTS = [
   {
-    category: "Transport",
+    category: "Ambulance",
     title: "Ambulans Transport",
     desc: "Unit standar untuk pemindahan pasien non-gawat darurat dengan efisiensi maksimal.",
     image:
@@ -30,7 +30,7 @@ const PRODUCTS = [
     leadTime: "Estimasi 30–45 hari kerja",
   },
   {
-    category: "Emergency",
+    category: "Ambulance",
     title: "Ambulans Gawat Darurat",
     desc: "Dilengkapi peralatan medis canggih untuk penanganan kondisi kritis di lapangan.",
     image:
@@ -41,7 +41,84 @@ const PRODUCTS = [
     leadTime: "Estimasi 45–60 hari kerja",
   },
   {
-    category: "Advanced",
+    category: "Ambulance",
+    title: "Ambulans ICU",
+    desc: "Mobile ICU dengan standar rumah sakit untuk penanganan pasien intensif.",
+    image:
+      "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800&auto=format&fit=crop",
+    specs: ["Ventilator", "Patient Monitor", "Defibrillator"],
+    idealFor: "Perawatan intensif dengan dukungan peralatan medis lanjutan.",
+    capacity: "3–4 kru medis",
+    leadTime: "Estimasi sesuai konfigurasi",
+  },
+  {
+    category: "Ambulance",
+    title: "Ambulans ICU",
+    desc: "Mobile ICU dengan standar rumah sakit untuk penanganan pasien intensif.",
+    image:
+      "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800&auto=format&fit=crop",
+    specs: ["Ventilator", "Patient Monitor", "Defibrillator"],
+    idealFor: "Perawatan intensif dengan dukungan peralatan medis lanjutan.",
+    capacity: "3–4 kru medis",
+    leadTime: "Estimasi sesuai konfigurasi",
+  },
+  {
+    category: "Mobil Jenazah",
+    title: "Ambulans ICU",
+    desc: "Mobile ICU dengan standar rumah sakit untuk penanganan pasien intensif.",
+    image:
+      "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800&auto=format&fit=crop",
+    specs: ["Ventilator", "Patient Monitor", "Defibrillator"],
+    idealFor: "Perawatan intensif dengan dukungan peralatan medis lanjutan.",
+    capacity: "3–4 kru medis",
+    leadTime: "Estimasi sesuai konfigurasi",
+  },
+  {
+    category: "Mobil Jenazah",
+    title: "Ambulans ICU",
+    desc: "Mobile ICU dengan standar rumah sakit untuk penanganan pasien intensif.",
+    image:
+      "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800&auto=format&fit=crop",
+    specs: ["Ventilator", "Patient Monitor", "Defibrillator"],
+    idealFor: "Perawatan intensif dengan dukungan peralatan medis lanjutan.",
+    capacity: "3–4 kru medis",
+    leadTime: "Estimasi sesuai konfigurasi",
+  },
+  {
+    category: "Part Tambahan",
+    title: "Ambulans ICU",
+    desc: "Mobile ICU dengan standar rumah sakit untuk penanganan pasien intensif.",
+    image:
+      "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800&auto=format&fit=crop",
+    specs: ["Ventilator", "Patient Monitor", "Defibrillator"],
+    idealFor: "Perawatan intensif dengan dukungan peralatan medis lanjutan.",
+    capacity: "3–4 kru medis",
+    leadTime: "Estimasi sesuai konfigurasi",
+  },
+  {
+    category: "Part Tambahan",
+    title: "Ambulans ICU",
+    desc: "Mobile ICU dengan standar rumah sakit untuk penanganan pasien intensif.",
+    image:
+      "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800&auto=format&fit=crop",
+    specs: ["Ventilator", "Patient Monitor", "Defibrillator"],
+    idealFor: "Perawatan intensif dengan dukungan peralatan medis lanjutan.",
+    capacity: "3–4 kru medis",
+    leadTime: "Estimasi sesuai konfigurasi",
+  },
+  {
+    category: "Part Tambahan",
+    title: "Ambulans ICU",
+    desc: "Mobile ICU dengan standar rumah sakit untuk penanganan pasien intensif.",
+    image:
+      "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800&auto=format&fit=crop",
+    specs: ["Ventilator", "Patient Monitor", "Defibrillator"],
+    idealFor: "Perawatan intensif dengan dukungan peralatan medis lanjutan.",
+    capacity: "3–4 kru medis",
+    leadTime: "Estimasi sesuai konfigurasi",
+  },
+  {
+    category: "Part Tambahan",
     title: "Ambulans ICU",
     desc: "Mobile ICU dengan standar rumah sakit untuk penanganan pasien intensif.",
     image:
@@ -53,7 +130,7 @@ const PRODUCTS = [
   },
 ];
 
-const CATEGORIES = ["Semua", "Transport", "Emergency", "Advanced"];
+const CATEGORIES = ["Semua", "Ambulance", "Mobil Jenazah", "Part Tambahan"];
 
 // --- Sub-components for Professional Layout ---
 
@@ -108,7 +185,7 @@ export default function ProductPage() {
       <PageHeader title="Katalog Produk" bgImage={ProductBg} />
 
       <IntroSection />
-      <ComplianceSection />
+      {/* <ComplianceSection /> */}
 
       <div className="mx-auto max-w-7xl px-5 pb-20 sm:px-8">
         {/* Filter Bar */}
