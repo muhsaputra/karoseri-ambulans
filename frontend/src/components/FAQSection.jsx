@@ -15,17 +15,24 @@ export default function FAQSection() {
   ];
 
   return (
-    <section className="py-20 max-w-2xl mx-auto px-6">
-      <h2 className="text-3xl font-bold text-center mb-10">Pertanyaan Umum</h2>
+    <section className="mx-auto max-w-3xl px-6 py-20">
+      <div className="mb-10 text-center">
+        <p className="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-red-600">
+          Informasi praktis
+        </p>
+        <h2 className="text-3xl font-bold text-[#071b3b] md:text-4xl">
+          Pertanyaan Umum
+        </h2>
+      </div>
       {faqs.map((item, i) => (
-        <div key={i} className="mb-4 border-b border-slate-200">
+        <div key={i} className="mb-4 overflow-hidden rounded-2xl border border-slate-200 bg-white transition-shadow hover:shadow-md">
           <button
             onClick={() => setOpen(open === i ? null : i)}
-            className="w-full text-left py-4 font-bold flex justify-between"
+            className="flex w-full items-center justify-between px-6 py-5 text-left font-bold text-[#071b3b]"
           >
-            {item.q} <span>{open === i ? "-" : "+"}</span>
+            {item.q} <span className="ml-5 text-xl text-red-600">{open === i ? "−" : "+"}</span>
           </button>
-          {open === i && <p className="pb-4 text-slate-600">{item.a}</p>}
+          {open === i && <p className="px-6 pb-5 leading-relaxed text-slate-600">{item.a}</p>}
         </div>
       ))}
     </section>

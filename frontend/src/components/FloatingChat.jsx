@@ -1,4 +1,3 @@
-import React from "react";
 import { SiWhatsapp } from "react-icons/si";
 
 export default function FloatingChat() {

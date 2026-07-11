@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 // PENTING: Ganti ke react-icons/lu agar tidak error
-import { LuX, LuArrowRight } from "react-icons/lu";
+import { LuX, LuArrowRight, LuCircleCheck } from "react-icons/lu";
 
 const PRODUCTS = [
   {
@@ -47,10 +47,10 @@ export default function ProductGallery() {
     <section className="w-full py-24 bg-slate-50">
       <div className="max-w-7xl mx-auto px-8 lg:px-20">
         <div className="mb-16">
-          <h2 className="text-blue-600 font-semibold uppercase tracking-widest text-sm mb-2">
+          <h2 className="mb-2 text-sm font-semibold uppercase tracking-widest text-red-600">
             Galeri Unit
           </h2>
-          <h3 className="text-4xl md:text-5xl font-bold tracking-tighter text-slate-900">
+          <h3 className="text-4xl font-bold tracking-tighter text-[#071b3b] md:text-5xl">
             Katalog Kendaraan Medis
           </h3>
         </div>
@@ -73,7 +73,7 @@ export default function ProductGallery() {
                 <h4 className="text-white text-2xl font-bold">
                   {product.title}
                 </h4>
-                <p className="text-blue-400 font-medium">{product.category}</p>
+                <p className="font-medium text-red-300">{product.category}</p>
                 <div className="mt-4 flex items-center gap-2 text-white/80 text-sm opacity-0 group-hover:opacity-100 transition-opacity">
                   Lihat Detail <LuArrowRight size={16} />
                 </div>
@@ -113,7 +113,7 @@ export default function ProductGallery() {
                 alt={selectedProduct.title}
               />
 
-              <span className="text-blue-600 font-bold uppercase text-xs tracking-wider">
+              <span className="text-xs font-bold uppercase tracking-wider text-red-600">
                 {selectedProduct.category}
               </span>
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -131,9 +131,9 @@ export default function ProductGallery() {
                       key={idx}
                       className="flex items-center gap-2 text-slate-600 bg-slate-50 p-3 rounded-lg"
                     >
-                      <LuCheckCircle2
+                      <LuCircleCheck
                         size={18}
-                        className="text-blue-600 shrink-0"
+                        className="shrink-0 text-red-600"
                       />
                       <span className="text-sm">{spec}</span>
                     </div>
@@ -142,7 +142,7 @@ export default function ProductGallery() {
               </div>
 
               {/* Call to Action Button */}
-              <button className="w-full mt-10 bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-xl font-bold transition-all shadow-lg hover:shadow-blue-500/20 active:scale-[0.98]">
+              <button className="mt-10 w-full rounded-xl bg-red-600 py-4 font-bold text-white shadow-lg transition-all hover:bg-red-700 hover:shadow-red-500/20 active:scale-[0.98]">
                 Hubungi Sales Sekarang
               </button>
             </motion.div>

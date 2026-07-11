@@ -1,21 +1,14 @@
-import React, { useState } from "react";
 import {
   MdPhone,
-  MdEmail,
   MdLocationOn,
   MdAccessTime,
   MdSend,
 } from "react-icons/md";
 import PageHeader from "../components/PageHeader";
-import AboutBg from "../assets/assets1.webp"; // Pastikan path benar
+import AboutBg from "../assets/workshop-ambulans.webp";
+import Seo from "../components/Seo";
 
 export default function ContactPage() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-
   const handleSubmit = (e) => {
     e.preventDefault();
     alert(
@@ -25,13 +18,15 @@ export default function ContactPage() {
 
   return (
     <div className="bg-slate-50 min-h-screen">
+      <Seo title="Hubungi Kami" />
       <PageHeader title="Hubungi Kami" bgImage={AboutBg} />
 
-      <div className="max-w-7xl mx-auto px-8 py-20">
+      <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8">
         <div className="grid lg:grid-cols-2 gap-16">
           {/* Left Column: Form */}
-          <div className="bg-white p-8 md:p-12 rounded-[2rem] shadow-sm border border-slate-100">
-            <h3 className="text-3xl font-bold mb-8">Kirim Pesan</h3>
+          <div className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm md:p-12">
+            <p className="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-red-600">Mulai konsultasi</p>
+            <h3 className="mb-8 text-3xl font-bold text-[#071b3b]">Kirim Pesan</h3>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label className="block text-sm font-bold text-slate-700 mb-2">
@@ -40,7 +35,7 @@ export default function ContactPage() {
                 <input
                   required
                   type="text"
-                  className="w-full p-4 rounded-xl border border-slate-200 focus:border-blue-600 focus:ring-1 focus:ring-blue-600 outline-none transition-all"
+                  className="w-full rounded-xl border border-slate-200 p-4 outline-none transition-all focus:border-red-600 focus:ring-1 focus:ring-red-600"
                   placeholder="Nama Instansi/Perusahaan"
                 />
               </div>
@@ -51,7 +46,7 @@ export default function ContactPage() {
                 <input
                   required
                   type="email"
-                  className="w-full p-4 rounded-xl border border-slate-200 focus:border-blue-600 focus:ring-1 focus:ring-blue-600 outline-none transition-all"
+                  className="w-full rounded-xl border border-slate-200 p-4 outline-none transition-all focus:border-red-600 focus:ring-1 focus:ring-red-600"
                   placeholder="email@perusahaan.com"
                 />
               </div>
@@ -62,13 +57,13 @@ export default function ContactPage() {
                 <textarea
                   required
                   rows="4"
-                  className="w-full p-4 rounded-xl border border-slate-200 focus:border-blue-600 focus:ring-1 focus:ring-blue-600 outline-none transition-all"
+                  className="w-full rounded-xl border border-slate-200 p-4 outline-none transition-all focus:border-red-600 focus:ring-1 focus:ring-red-600"
                   placeholder="Tulis kebutuhan spesifikasi Anda..."
                 />
               </div>
               <button
                 type="submit"
-                className="w-full bg-blue-600 text-white py-4 rounded-xl font-bold hover:bg-blue-700 transition-all flex items-center justify-center gap-2"
+                className="flex w-full items-center justify-center gap-2 rounded-xl bg-red-600 py-4 font-bold text-white transition-all hover:bg-red-700"
               >
                 Kirim Pesan <MdSend />
               </button>
@@ -77,10 +72,10 @@ export default function ContactPage() {
 
           {/* Right Column: Info & Map */}
           <div className="space-y-8">
-            <div className="bg-slate-900 text-white p-8 rounded-[2rem] space-y-6">
+            <div className="space-y-6 rounded-[2rem] bg-[#071b3b] p-8 text-white">
               <h3 className="text-2xl font-bold mb-6">Informasi Workshop</h3>
               <div className="flex gap-4 items-start">
-                <MdLocationOn className="text-blue-500 text-2xl" />
+                <MdLocationOn className="text-2xl text-red-500" />
                 <div>
                   <h5 className="font-bold">Alamat Utama</h5>
                   <p className="text-slate-400 text-sm">
@@ -89,7 +84,7 @@ export default function ContactPage() {
                 </div>
               </div>
               <div className="flex gap-4 items-start">
-                <MdAccessTime className="text-blue-500 text-2xl" />
+                <MdAccessTime className="text-2xl text-red-500" />
                 <div>
                   <h5 className="font-bold">Jam Kerja</h5>
                   <p className="text-slate-400 text-sm">
@@ -100,7 +95,7 @@ export default function ContactPage() {
               <div className="pt-6 border-t border-slate-800">
                 <a
                   href="https://wa.me/6281234567890"
-                  className="flex items-center gap-3 text-blue-400 font-bold hover:text-white transition-colors"
+                  className="flex items-center gap-3 font-bold text-red-300 transition-colors hover:text-white"
                 >
                   <MdPhone /> Chat via WhatsApp
                 </a>

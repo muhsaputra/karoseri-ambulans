@@ -1,100 +1,152 @@
-import React, { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-// Ganti import dari lucide-react ke react-icons/lu
-import { LuMenu, LuX } from "react-icons/lu";
-import { motion, AnimatePresence } from "framer-motion";
+import { LuArrowUpRight, LuMenu, LuX } from "react-icons/lu";
+import { AnimatePresence, motion } from "framer-motion";
+
+const MENU_ITEMS = [
+  { name: "Beranda", path: "/" },
+  { name: "Tentang", path: "/tentang" },
+  { name: "Produk", path: "/produk" },
+  { name: "Daftar Harga", path: "/daftar-harga" },
+  { name: "Layanan", path: "/layanan" },
+  { name: "Artikel", path: "/artikel" },
+];
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
 
-  const menuItems = [
-    { name: "Beranda", path: "/" },
-    { name: "Tentang", path: "/tentang" },
-    { name: "Produk", path: "/produk" },
-    { name: "Daftar Harga", path: "/daftar-harga" },
-    { name: "Layanan", path: "/layanan" },
-    { name: "Artikel", path: "/artikel" },
-  ];
+  useEffect(() => {
+    const updateNavbar = () => setIsScrolled(window.scrollY > 24);
+    updateNavbar();
+    window.addEventListener("scroll", updateNavbar, { passive: true });
+    return () => window.removeEventListener("scroll", updateNavbar);
+  }, []);
 
   return (
     <>
-      {/* NAVBAR CONTAINER */}
-      <nav className="fixed top-6 left-1/2 -translate-x-1/2 w-[95%] max-w-7xl z-50 px-8 py-4 rounded-2xl bg-white/5 backdrop-blur-2xl border border-white/10 flex justify-between items-center text-white shadow-2xl">
-        {/* Logo */}
-        <Link to="/" className="text-2xl font-bold tracking-tighter">
-          KAROSERI<span className="text-blue-500">AMBULANS</span>
-        </Link>
-
-        {/* Desktop Menu */}
-        <div className="hidden md:flex gap-1 text-sm font-medium">
-          {menuItems.map((item) => {
-            const isActive = location.pathname === item.path;
-            return (
-              <Link
-                key={item.name}
-                to={item.path}
-                className={`relative px-4 py-2 rounded-full transition-colors duration-300 ${
-                  isActive ? "text-white" : "text-slate-400 hover:text-white"
-                }`}
-              >
-                {isActive && (
-                  <motion.div
-                    layoutId="navbar-active"
-                    className="absolute inset-0 bg-white/10 rounded-full"
-                  />
-                )}
-                <span className="relative z-10">{item.name}</span>
-              </Link>
-            );
-          })}
-        </div>
-
-        {/* Desktop Button */}
-        <div className="hidden md:block">
-          <Link
-            to="/kontak"
-            className="group relative px-6 py-2.5 rounded-full text-sm font-semibold text-white overflow-hidden transition-all duration-300"
-          >
-            <div className="absolute inset-0 bg-blue-600 transition-transform duration-300 group-hover:scale-105" />
-            <span className="relative z-10">Kontak</span>
-          </Link>
-        </div>
-
-        {/* Hamburger - Ikon diganti ke LuMenu dan LuX */}
-        <button
-          className="md:hidden z-[60] p-2"
-          onClick={() => setIsOpen(!isOpen)}
+      <motion.header
+        initial={{ y: -24, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
+        className="fixed left-1/2 top-4 z-50 w-[94%] max-w-7xl -translate-x-1/2"
+      >
+        <nav
+          aria-label="Navigasi utama"
+          className={`relative flex items-center justify-between overflow-hidden rounded-2xl border px-4 py-3 text-white transition-all duration-300 md:px-6 ${
+            isScrolled
+              ? "border-white/15 bg-[#071b3b]/95 shadow-2xl shadow-[#071b3b]/25 backdrop-blur-2xl"
+              : "border-white/20 bg-[#071b3b]/75 shadow-xl shadow-[#071b3b]/15 backdrop-blur-xl"
+          }`}
         >
-          {isOpen ? <LuX size={28} /> : <LuMenu size={28} />}
-        </button>
-      </nav>
+          <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/40 to-transparent" />
 
-      {/* MOBILE MENU OVERLAY */}
+          <Link
+            to="/"
+            className="relative z-10 flex items-center gap-3"
+            aria-label="Karoseri Ambulans - Beranda"
+          >
+            <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-red-600 text-xs font-black tracking-tighter shadow-lg shadow-red-950/30">
+              KA
+            </span>
+            <span className="text-base font-bold tracking-tight sm:text-lg">
+              KAROSERI<span className="text-red-400">AMBULANS</span>
+            </span>
+          </Link>
+
+          <div className="hidden items-center gap-1 lg:flex">
+            {MENU_ITEMS.map((item) => {
+              const isActive = location.pathname === item.path;
+              return (
+                <Link
+                  key={item.name}
+                  to={item.path}
+                  aria-current={isActive ? "page" : undefined}
+                  className={`relative rounded-full px-3.5 py-2 text-sm font-medium transition-colors ${isActive ? "text-white" : "text-slate-300 hover:text-white"}`}
+                >
+                  {isActive && (
+                    <motion.span
+                      layoutId="navbar-active"
+                      transition={{
+                        type: "spring",
+                        stiffness: 320,
+                        damping: 30,
+                      }}
+                      className="absolute inset-0 rounded-full bg-white/12"
+                    />
+                  )}
+                  <span className="relative z-10">{item.name}</span>
+                </Link>
+              );
+            })}
+          </div>
+
+          <div className="relative z-10 hidden lg:block">
+            <Link
+              to="/kontak"
+              className="group inline-flex items-center gap-2 rounded-full bg-red-600 px-5 py-2.5 text-sm font-bold shadow-lg shadow-red-950/25 transition-all hover:-translate-y-0.5 hover:bg-red-500 focus:outline-none focus:ring-4 focus:ring-red-400/30"
+            >
+              Konsultasi{" "}
+              <LuArrowUpRight className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            </Link>
+          </div>
+
+          <button
+            type="button"
+            className="relative z-10 inline-flex h-10 w-10 items-center justify-center rounded-xl border border-white/15 bg-white/5 transition-colors hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-red-400 lg:hidden"
+            onClick={() => setIsOpen((open) => !open)}
+            aria-label={isOpen ? "Tutup menu" : "Buka menu"}
+            aria-expanded={isOpen}
+            aria-controls="mobile-navigation"
+          >
+            {isOpen ? <LuX size={21} /> : <LuMenu size={21} />}
+          </button>
+        </nav>
+      </motion.header>
+
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-40 bg-slate-950/95 backdrop-blur-xl flex flex-col items-center justify-center gap-8 md:hidden"
+            id="mobile-navigation"
+            initial={{ opacity: 0, y: -12 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -12 }}
+            transition={{ duration: 0.22 }}
+            className="fixed inset-x-3 top-[5.6rem] z-40 overflow-hidden rounded-3xl border border-white/10 bg-[#071b3b]/98 p-3 shadow-2xl shadow-[#071b3b]/35 backdrop-blur-2xl lg:hidden"
           >
-            {menuItems.map((item, index) => (
-              <motion.div
-                key={item.name}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-              >
-                <Link
-                  to={item.path}
-                  className="text-2xl font-bold hover:text-blue-400 transition-all"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {item.name}
-                </Link>
-              </motion.div>
-            ))}
+            <div className="mb-2 px-4 pt-3 text-xs font-bold uppercase tracking-[0.2em] text-red-300">
+              Navigasi
+            </div>
+            <div className="space-y-1">
+              {MENU_ITEMS.map((item, index) => {
+                const isActive = location.pathname === item.path;
+                return (
+                  <motion.div
+                    key={item.name}
+                    initial={{ opacity: 0, x: -12 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: index * 0.04 }}
+                  >
+                    <Link
+                      to={item.path}
+                      onClick={() => setIsOpen(false)}
+                      className={`flex items-center justify-between rounded-2xl px-4 py-3.5 font-semibold transition-colors ${isActive ? "bg-red-600 text-white" : "text-slate-200 hover:bg-white/8 hover:text-white"}`}
+                    >
+                      {item.name}
+                      <span className="text-sm opacity-70">0{index + 1}</span>
+                    </Link>
+                  </motion.div>
+                );
+              })}
+            </div>
+            <Link
+              to="/kontak"
+              onClick={() => setIsOpen(false)}
+              className="mt-3 flex items-center justify-center gap-2 rounded-2xl border border-white/15 bg-white px-4 py-3.5 font-bold text-[#071b3b] transition-colors hover:bg-red-50"
+            >
+              Mulai konsultasi <LuArrowUpRight />
+            </Link>
           </motion.div>
         )}
       </AnimatePresence>

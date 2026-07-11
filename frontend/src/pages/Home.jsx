@@ -1,27 +1,18 @@
-import Navbar from "../components/Navbar";
 import HeroSection from "../components/Hero";
 import TrustSection from "../components/TrustSection";
 import AboutSection from "../components/AboutSection";
 import ProductSection from "../components/ProductSection";
 import FAQSection from "../components/FAQSection";
 import RequestQuoteSection from "../components/RequestQuoteSection";
-import Footer from "../components/Footer";
+import Seo from "../components/Seo";
+import { PortfolioSection, SocialProofSection } from "../components/ShowcaseSections";
 import { motion } from "framer-motion";
 
 import {
-  MdVerified,
-  MdBuild,
-  MdPeople,
-  MdTrendingUp,
-  MdHistory,
-  MdPhone,
-  MdEmail,
-  MdLocationOn,
   MdDesignServices,
   MdConstruction,
   MdCheckCircle,
   MdLocalShipping,
-  MdGavel,
 } from "react-icons/md";
 
 const PROCESS = [
@@ -50,37 +41,55 @@ const PROCESS = [
 const Home = () => {
   return (
     <div className="min-h-screen bg-white">
-      <Navbar />
+      <Seo title="Karoseri Ambulans Profesional" />
       <main>
         <HeroSection />
         <AboutSection />
         <TrustSection />
-        <section className="bg-slate-900 py-20 px-8 rounded-[2rem] max-w-7xl mx-auto text-white text-center my-16 shadow-2xl">
-          <MdConstruction className="text-blue-500 text-5xl mx-auto mb-6" />
-          <h4 className="text-3xl md:text-4xl font-bold mb-4">
-            Butuh Spesifikasi Khusus?
-          </h4>
-          <p className="text-slate-400 mb-10 max-w-xl mx-auto leading-relaxed">
-            Tim engineering kami siap membantu merancang layout interior,
-            kelistrikan, dan sistem medis sesuai kebutuhan operasional rumah
-            sakit Anda.
-          </p>
-          <button className="bg-blue-600 px-10 py-4 rounded-full font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-600/20 hover:scale-105">
-            Konsultasi Custom Build
-          </button>
+        <section className="mx-auto my-16 max-w-7xl px-5 sm:px-8">
+          <div className="relative overflow-hidden rounded-[2rem] bg-[#071b3b] px-7 py-14 text-center text-white shadow-2xl shadow-[#071b3b]/20 sm:px-12 md:py-20">
+            <div className="absolute -right-20 -top-24 h-64 w-64 rounded-full bg-red-600/25 blur-3xl" />
+            <div className="absolute -bottom-32 -left-20 h-64 w-64 rounded-full bg-blue-500/20 blur-3xl" />
+            <div className="relative">
+              <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-red-600 text-3xl shadow-lg shadow-red-950/30">
+                <MdConstruction />
+              </div>
+              <p className="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-red-300">
+                Dirancang sesuai kebutuhan Anda
+              </p>
+              <h4 className="mx-auto max-w-2xl text-3xl font-bold tracking-tight md:text-5xl">
+                Butuh Spesifikasi Khusus?
+              </h4>
+              <p className="mx-auto mb-10 mt-5 max-w-xl leading-relaxed text-slate-300">
+                Tim engineering kami siap merancang layout interior,
+                kelistrikan, dan sistem medis yang tepat untuk operasional Anda.
+              </p>
+              <a
+                href="https://wa.me/6281234567890?text=Halo%20Karoseri%20Ambulans%2C%20saya%20ingin%20konsultasi%20Custom%20Build."
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center justify-center rounded-full bg-red-600 px-8 py-4 font-bold shadow-lg shadow-red-950/30 transition-all hover:-translate-y-1 hover:bg-red-500 focus:outline-none focus:ring-4 focus:ring-red-400/30"
+              >
+                Konsultasi Custom Build
+              </a>
+            </div>
+          </div>
         </section>
         <ProductSection />
-        {/* Custom Build CTA Section */}
-        {/* 3. Alur Kerja (Our Process) - Updated Professional UI */}
-        <section className="py-20 px-8 bg-slate-50">
+        <PortfolioSection />
+        <SocialProofSection />
+        <section className="border-y border-slate-100 bg-slate-50 py-20 px-5 sm:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-blue-600 font-bold tracking-widest uppercase text-sm mb-2">
+              <p className="mb-3 text-sm font-bold tracking-[0.18em] uppercase text-red-600">
                 Proses Kami
-              </h2>
-              <h3 className="text-4xl font-bold text-slate-900">
+              </p>
+              <h3 className="text-4xl font-bold tracking-tight text-[#071b3b] md:text-5xl">
                 Alur Kerja Profesional
               </h3>
+              <p className="mx-auto mt-4 max-w-xl text-slate-600">
+                Transparan dari konsultasi awal hingga unit siap digunakan.
+              </p>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -91,34 +100,31 @@ const Home = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: i * 0.1 }}
                   viewport={{ once: true }}
-                  className="relative p-8 bg-white rounded-3xl shadow-sm border border-slate-100 hover:shadow-2xl hover:border-blue-100 transition-all duration-300 group cursor-default"
+                  className="relative overflow-hidden rounded-3xl border border-slate-200 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-red-200 hover:shadow-xl hover:shadow-[#071b3b]/10 group"
                 >
-                  {/* Step Number */}
-                  <div className="absolute -top-4 -right-4 text-6xl font-black text-blue-50 opacity-10 group-hover:opacity-20 transition-opacity">
+                  <div className="absolute -top-5 -right-3 text-7xl font-black text-[#071b3b]/[0.045] transition-colors group-hover:text-red-600/[0.08]">
                     0{i + 1}
                   </div>
 
-                  {/* Icon */}
-                  <div className="w-16 h-16 bg-blue-600 text-white rounded-2xl flex items-center justify-center text-3xl mb-8 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-blue-600/20">
+                  <div className="mb-8 flex h-16 w-16 items-center justify-center rounded-2xl bg-[#071b3b] text-3xl text-white shadow-lg shadow-[#071b3b]/20 transition-transform duration-300 group-hover:scale-110 group-hover:bg-red-600">
                     <step.icon />
                   </div>
 
-                  {/* Content */}
-                  <h4 className="text-xl font-bold mb-3 text-slate-900 group-hover:text-blue-600 transition-colors">
+                  <h4 className="mb-3 text-xl font-bold text-[#071b3b] transition-colors group-hover:text-red-600">
                     {step.title}
                   </h4>
                   <p className="text-slate-600 leading-relaxed text-sm">
                     {step.desc}
                   </p>
 
-                  {/* Decorative line at bottom */}
-                  <div className="w-12 h-1 bg-blue-600 mt-6 rounded-full group-hover:w-full transition-all duration-500" />
+                  <div className="mt-6 h-1 w-12 rounded-full bg-red-600 transition-all duration-500 group-hover:w-full" />
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
-        <FAQSection /> {/* Edukasi & SEO */}
+        <FAQSection />
+        <RequestQuoteSection />
       </main>
     </div>
   );

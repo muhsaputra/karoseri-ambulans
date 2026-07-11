@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import PageHeader from "../components/PageHeader";
-import AboutBg from "../assets/assets1.webp";
+import AboutBg from "../assets/workshop-ambulans.webp";
+import Seo from "../components/Seo";
 
 // Mengambil URL dan Token dari konfigurasi sistem (Vercel atau .env)
 const API_URL = import.meta.env.VITE_API_URL || "http://localhost:1337";
@@ -11,6 +12,8 @@ const API_TOKEN = import.meta.env.VITE_API_TOKEN;
 export default function Blog() {
   const [articles, setArticles] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("Semua");
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     const fetchArticles = async () => {
@@ -28,6 +31,9 @@ export default function Blog() {
         setArticles(response.data.data);
       } catch (err) {
         console.error("Error fetching articles:", err);
+        setError(true);
+      } finally {
+        setLoading(false);
       }
     };
 
@@ -54,11 +60,29 @@ export default function Blog() {
 
   return (
     <div className="bg-slate-50 min-h-screen pb-20">
+      <Seo title="Berita & Artikel" description="Informasi seputar ambulans, standar keselamatan, dan kendaraan medis." />
       <PageHeader title="Berita & Artikel" bgImage={AboutBg} />
 
-      <div className="max-w-7xl mx-auto px-8 py-16">
-        {/* List Artikel */}
-        <div className="grid md:grid-cols-3 gap-8">
+      <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8">
+        <div className="mb-10 flex flex-wrap justify-center gap-2">
+          {categories.map((category) => (
+            <button
+              key={category}
+              onClick={() => setSelectedCategory(category)}
+              className={`rounded-full px-5 py-2 text-sm font-bold transition-colors ${
+                selectedCategory === category
+                  ? "bg-red-600 text-white"
+                  : "bg-white text-slate-600 hover:bg-red-50 hover:text-red-600"
+              }`}
+            >
+              {category}
+            </button>
+          ))}
+        </div>
+        {loading && <div className="grid gap-8 md:grid-cols-3">{[1, 2, 3].map((item) => <div key={item} className="h-80 animate-pulse rounded-3xl bg-slate-200" />)}</div>}
+        {error && <div className="rounded-3xl border border-red-100 bg-red-50 p-10 text-center"><h2 className="text-xl font-bold text-[#071b3b]">Artikel belum dapat dimuat</h2><p className="mt-2 text-slate-600">Silakan muat ulang halaman atau coba beberapa saat lagi.</p></div>}
+        {!loading && !error && filteredArticles.length === 0 && <div className="rounded-3xl border border-slate-200 bg-white p-10 text-center"><h2 className="text-xl font-bold text-[#071b3b]">Belum ada artikel pada kategori ini</h2><p className="mt-2 text-slate-600">Pilih kategori lain untuk menemukan artikel yang tersedia.</p></div>}
+        {!loading && !error && filteredArticles.length > 0 && <div className="grid md:grid-cols-3 gap-8">
           {filteredArticles.map((item) => {
             // Akses langsung properti tanpa .attributes
             const authorName = item.author?.username || "Admin";
@@ -66,7 +90,7 @@ export default function Blog() {
             return (
               <div
                 key={item.id}
-                className="group bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-2xl transition-all duration-300"
+                className="group overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-[#071b3b]/10"
               >
                 <div className="aspect-video overflow-hidden bg-slate-100">
                   {/* Akses langsung item.CoverImage.url */}
@@ -85,23 +109,24 @@ export default function Blog() {
 
                 <div className="p-6">
                   <div className="flex justify-between items-center mb-4">
-                    <span className="bg-blue-50 text-blue-600 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider">
+                    <span className="rounded-full bg-red-50 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-red-600">
                       {item.Category || "Artikel"}
                     </span>
                     <span className="text-slate-400 text-xs">
                       {item.publishedAt
                         ? new Date(item.publishedAt).toLocaleDateString("id-ID")
                         : "N/A"}
+                      {" · "}{calculateReadTime(item.Content)} menit baca
                     </span>
                   </div>
 
-                  <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors line-clamp-2 h-14">
+                  <h3 className="mb-3 h-14 text-xl font-bold text-[#071b3b] transition-colors group-hover:text-red-600 line-clamp-2">
                     {item.Title || "Tanpa Judul"}
                   </h3>
 
                   <div className="flex items-center justify-between mt-4 pt-4 border-t border-slate-100">
                     <div className="flex items-center gap-2">
-                      <div className="w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center text-[10px] font-bold text-blue-600">
+                      <div className="flex h-6 w-6 items-center justify-center rounded-full bg-red-100 text-[10px] font-bold text-red-600">
                         {authorName?.charAt(0).toUpperCase()}
                       </div>
                       <span className="text-xs font-medium text-slate-600">
@@ -111,7 +136,7 @@ export default function Blog() {
 
                     <Link
                       to={`/artikel/${item.Slug || "#"}`}
-                      className="inline-flex items-center text-blue-600 font-bold hover:gap-2 transition-all text-sm"
+                      className="inline-flex items-center text-sm font-bold text-red-600 transition-all hover:gap-2"
                     >
                       Baca <span>→</span>
                     </Link>
@@ -121,6 +146,7 @@ export default function Blog() {
             );
           })}
         </div>
+        }
       </div>
     </div>
   );

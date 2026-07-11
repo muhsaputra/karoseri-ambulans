@@ -23,13 +23,13 @@ export default function ProcessTimeline() {
   return (
     <section className="py-20 bg-slate-50">
       <div className="max-w-5xl mx-auto px-6">
-        <h2 className="text-3xl font-bold text-center mb-16 text-blue-900">
+        <h2 className="mb-16 text-center text-3xl font-bold text-[#071b3b]">
           Alur Kerja Kami
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
-          {steps.map((step, index) => (
+          {steps.map((step) => (
             <div key={step.id} className="relative text-center">
-              <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto font-bold text-lg mb-4 shadow-lg">
+              <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[#071b3b] text-lg font-bold text-white shadow-lg transition-colors hover:bg-red-600">
                 {step.id}
               </div>
               <h3 className="font-bold text-slate-800 mb-2">{step.title}</h3>

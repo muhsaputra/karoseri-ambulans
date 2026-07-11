@@ -1,12 +1,13 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import axios from "axios";
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
-import { FaShareAlt, FaWhatsapp, FaTwitter, FaLink } from "react-icons/fa";
+import { FaWhatsapp, FaLink } from "react-icons/fa";
 import { motion, useScroll, useSpring } from "framer-motion";
 // Breadcrumbs
 import PageHeader from "../components/PageHeader";
-import AboutBg from "../assets/assets1.webp";
+import AboutBg from "../assets/workshop-ambulans.webp";
+import Seo from "../components/Seo";
 
 export default function BlogDetail() {
   const { scrollYProgress } = useScroll();
@@ -85,15 +86,16 @@ export default function BlogDetail() {
 
   return (
     <div className="bg-slate-50 min-h-screen relative">
+      <Seo title={article.Title} description={article.Excerpt} />
       <motion.div
-        className="fixed top-0 left-0 h-1.5 bg-blue-600 z-50 origin-left"
+        className="fixed top-0 left-0 z-50 h-1.5 origin-left bg-red-600"
         style={{ scaleX }} // Gunakan scaleX untuk progress
       />
       <PageHeader title="Berita & Artikel" bgImage={AboutBg} />
 
       {/* Progress Bar */}
       <div
-        className="fixed top-0 left-0 h-1.5 bg-blue-600 z-50 transition-all duration-300"
+        className="fixed top-0 left-0 z-50 h-1.5 bg-red-600 transition-all duration-300"
         style={{ width: `${progress}%` }}
       />
 
@@ -101,17 +103,17 @@ export default function BlogDetail() {
         {/* Back Button */}
         <Link
           to="/artikel"
-          className="text-slate-500 hover:text-blue-600 flex items-center gap-2 mb-8 transition-all"
+          className="mb-8 flex items-center gap-2 text-slate-500 transition-all hover:text-red-600"
         >
           ← Kembali ke Berita
         </Link>
 
         {/* Hero Section */}
         <div className="mb-10">
-          <span className="text-blue-600 font-bold uppercase tracking-widest text-xs bg-blue-50 px-3 py-1 rounded-full">
+          <span className="rounded-full bg-red-50 px-3 py-1 text-xs font-bold uppercase tracking-widest text-red-600">
             {article.Category || "BERITA"}
           </span>
-          <h1 className="text-4xl md:text-6xl font-extrabold text-slate-900 mt-6 leading-tight">
+          <h1 className="mt-6 text-4xl font-extrabold leading-tight text-[#071b3b] md:text-6xl">
             {article.Title}
           </h1>
           <p className="text-xl text-slate-500 mt-6 leading-relaxed">
@@ -121,7 +123,7 @@ export default function BlogDetail() {
 
         {/* Metadata */}
         <div className="flex items-center gap-4 mb-10 py-6 border-y border-slate-200">
-          <div className="w-12 h-12 rounded-full bg-blue-600 flex items-center justify-center text-white font-bold shadow-md">
+          <div className="flex h-12 w-12 items-center justify-center rounded-full bg-red-600 font-bold text-white shadow-md">
             {article.author?.username?.charAt(0).toUpperCase() || "A"}
           </div>
           <div>
