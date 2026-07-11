@@ -47,8 +47,12 @@ const Navbar = () => {
             className="relative z-10 flex items-center gap-3"
             aria-label="Karoseri Ambulans - Beranda"
           >
-            <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-red-600 text-xs font-black tracking-tighter shadow-lg shadow-red-950/30">
-              KA
+            <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-white/10 shadow-lg shadow-red-950/15">
+              <img
+                src="/favicon.svg"
+                alt="Karoseri Ambulans"
+                className="h-6 w-6"
+              />
             </span>
             <span className="text-base font-bold tracking-tight sm:text-lg">
               KAROSERI<span className="text-red-400">AMBULANS</span>
