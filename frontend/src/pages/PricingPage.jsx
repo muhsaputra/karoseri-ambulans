@@ -17,7 +17,7 @@ import Seo from "../components/Seo";
 const PLANS = [
   {
     name: "Transport Unit",
-    price: "Mulai dari Rp 150 Juta",
+    price: "Ambulance Medis",
     desc: "Solusi efisien untuk pemindahan pasien non-gawat darurat.",
     features: [
       "Sasis Standar",
@@ -29,8 +29,8 @@ const PLANS = [
     highlight: false,
   },
   {
-    name: "Emergency (AGD)",
-    price: "Mulai dari Rp 350 Juta",
+    name: "Transport Unit",
+    price: "Mobil Jenazah",
     desc: "Standar operasional rumah sakit untuk penanganan kondisi kritis.",
     features: [
       "Stretcher Scoop",
@@ -43,8 +43,8 @@ const PLANS = [
     highlight: true,
   },
   {
-    name: "Advanced ICU",
-    price: "Custom Quotation",
+    name: "Part Tambahan",
+    price: "Ambulance",
     desc: "Mobile ICU dengan teknologi medis terkini untuk pasien intensif.",
     features: [
       "Ventilator",
@@ -80,10 +80,6 @@ const FAQS = [
   [
     "Apakah harga sudah termasuk kendaraan?",
     "Estimasi menyesuaikan skema pengadaan yang dipilih. Tim kami akan menjelaskan komponen kendaraan dan karoseri dalam quotation formal.",
-  ],
-  [
-    "Berapa lama quotation berlaku?",
-    "Quotation resmi memuat masa berlaku, ruang lingkup pekerjaan, dan ketentuan pembayaran agar proses pengadaan lebih jelas.",
   ],
   [
     "Bisakah spesifikasi disesuaikan dengan anggaran?",
@@ -167,7 +163,7 @@ export default function PricingPage() {
                     : "bg-[#071b3b] text-white hover:bg-red-600"
                 }`}
               >
-                Minta Penawaran Formal
+                Konsultasi Harga
               </a>
             </motion.div>
           ))}
@@ -208,8 +204,8 @@ export default function PricingPage() {
         </section>
 
         {/* Legal Disclaimer & Tools */}
-        <section className="mt-16 grid gap-8 md:grid-cols-2">
-          <div className="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm flex gap-4">
+        <section className="mt-16 flex justify-center">
+          <div className="flex max-w-3xl items-start gap-4 rounded-3xl border border-slate-200 bg-white p-8 shadow-sm">
             <MdInfoOutline className="shrink-0 text-3xl text-red-600" />
             <div>
               <h2 className="mb-2 font-bold text-[#071b3b]">
@@ -224,7 +220,7 @@ export default function PricingPage() {
             </div>
           </div>
 
-          <div className="flex flex-col items-center justify-center rounded-3xl bg-[#071b3b] p-8 text-center text-white">
+          {/* <div className="flex flex-col items-center justify-center rounded-3xl bg-[#071b3b] p-8 text-center text-white">
             <h2 className="mb-2 font-bold">Dapatkan Proposal Lengkap</h2>
             <p className="text-slate-400 text-sm mb-6">
               Dapatkan detail spesifikasi lengkap dalam format PDF.
@@ -237,7 +233,7 @@ export default function PricingPage() {
             >
               <MdDownload /> Minta katalog PDF
             </a>
-          </div>
+          </div> */}
         </section>
 
         <section className="mx-auto mt-24 max-w-3xl">
