@@ -1,13 +1,9 @@
 import { useState, useEffect } from "react";
-import axios from "axios";
 import { Link } from "react-router-dom";
 import PageHeader from "../components/PageHeader";
 import AboutBg from "../assets/workshop-ambulans.webp";
 import Seo from "../components/Seo";
-
-// Mengambil URL dan Token dari konfigurasi sistem (Vercel atau .env)
-const API_URL = import.meta.env.VITE_API_URL || "http://localhost:1337";
-const API_TOKEN = import.meta.env.VITE_API_TOKEN;
+import { cms, getMediaUrl } from "../lib/cms";
 
 export default function Blog() {
   const [articles, setArticles] = useState([]);
@@ -19,18 +15,13 @@ export default function Blog() {
     const fetchArticles = async () => {
       try {
         // Pada Strapi v5, respons data langsung dapat diakses
-        const response = await axios.get(
-          `${API_URL.replace(/\/$/, "")}/api/articles?populate=*`,
-          {
-            headers: {
-              Authorization: `Bearer ${API_TOKEN}`,
-            },
-          },
-        );
+        const response = await cms.get("/api/articles", {
+          params: { populate: "*" },
+        });
         // Sesuaikan dengan struktur respons API Anda
         setArticles(response.data.data);
       } catch (err) {
-        console.error("Error fetching articles:", err);
+        console.error("Error fetching articles:", err.response?.status || err.message);
         setError(true);
       } finally {
         setLoading(false);
@@ -80,7 +71,7 @@ export default function Blog() {
           ))}
         </div>
         {loading && <div className="grid gap-8 md:grid-cols-3">{[1, 2, 3].map((item) => <div key={item} className="h-80 animate-pulse rounded-3xl bg-slate-200" />)}</div>}
-        {error && <div className="rounded-3xl border border-red-100 bg-red-50 p-10 text-center"><h2 className="text-xl font-bold text-[#071b3b]">Artikel belum dapat dimuat</h2><p className="mt-2 text-slate-600">Silakan muat ulang halaman atau coba beberapa saat lagi.</p></div>}
+        {error && <div className="rounded-3xl border border-red-100 bg-red-50 p-10 text-center"><h2 className="text-xl font-bold text-[#071b3b]">Artikel belum dapat dimuat</h2><p className="mt-2 text-slate-600">Akses artikel dari CMS belum tersedia. Silakan coba lagi setelah konfigurasi akses publik CMS diperbarui.</p></div>}
         {!loading && !error && filteredArticles.length === 0 && <div className="rounded-3xl border border-slate-200 bg-white p-10 text-center"><h2 className="text-xl font-bold text-[#071b3b]">Belum ada artikel pada kategori ini</h2><p className="mt-2 text-slate-600">Pilih kategori lain untuk menemukan artikel yang tersedia.</p></div>}
         {!loading && !error && filteredArticles.length > 0 && <div className="grid md:grid-cols-3 gap-8">
           {filteredArticles.map((item) => {
@@ -96,7 +87,7 @@ export default function Blog() {
                   {/* Akses langsung item.CoverImage.url */}
                   {item.CoverImage?.url ? (
                     <img
-                      src={`${API_URL}${item.CoverImage.url}`}
+                      src={getMediaUrl(item.CoverImage.url)}
                       alt={item.Title || "Blog Image"}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />

@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
-import axios from "axios";
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
 import { FaWhatsapp, FaLink } from "react-icons/fa";
 import { motion, useScroll, useSpring } from "framer-motion";
@@ -8,12 +7,14 @@ import { motion, useScroll, useSpring } from "framer-motion";
 import PageHeader from "../components/PageHeader";
 import AboutBg from "../assets/workshop-ambulans.webp";
 import Seo from "../components/Seo";
+import { cms, getMediaUrl } from "../lib/cms";
 
 export default function BlogDetail() {
   const { scrollYProgress } = useScroll();
   const { slug } = useParams();
   const [article, setArticle] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
   const [progress, setProgress] = useState(0);
 
   const scaleX = useSpring(scrollYProgress, {
@@ -50,8 +51,8 @@ export default function BlogDetail() {
   };
 
   useEffect(() => {
-    axios
-      .get(`http://localhost:1337/api/articles`, {
+    cms
+      .get("/api/articles", {
         params: {
           // Pastikan 'Slug' menggunakan S besar sesuai data JSON Anda
           "filters[Slug][$eq]": slug,
@@ -66,7 +67,8 @@ export default function BlogDetail() {
         setLoading(false);
       })
       .catch((err) => {
-        console.error("Error Detail:", err.response ? err.response.data : err);
+        console.error("Error Detail:", err.response?.status || err.message);
+        setError(true);
         setLoading(false);
       });
   }, [slug]);
@@ -75,6 +77,12 @@ export default function BlogDetail() {
     return (
       <div className="min-h-screen flex items-center justify-center">
         Memuat...
+      </div>
+    );
+  if (error)
+    return (
+      <div className="flex min-h-screen items-center justify-center bg-slate-50 px-6 text-center">
+        <div><h1 className="text-2xl font-bold text-[#071b3b]">Artikel belum dapat dimuat</h1><p className="mt-3 text-slate-600">Akses artikel dari CMS belum tersedia. Silakan coba lagi beberapa saat lagi.</p><Link to="/artikel" className="mt-6 inline-flex rounded-full bg-red-600 px-5 py-3 font-bold text-white">Kembali ke Artikel</Link></div>
       </div>
     );
   if (!article)
@@ -147,7 +155,7 @@ export default function BlogDetail() {
         {article.CoverImage?.url && (
           <div className="mb-12">
             <img
-              src={`http://localhost:1337${article.CoverImage.url}`}
+              src={getMediaUrl(article.CoverImage.url)}
               alt={article.Title}
               className="w-full rounded-3xl shadow-xl"
             />
@@ -187,7 +195,7 @@ export default function BlogDetail() {
                 },
                 image: ({ image }) => (
                   <img
-                    src={`http://localhost:1337${image.url}`}
+                    src={getMediaUrl(image.url)}
                     alt={image.alternativeText || "Article image"}
                     className="w-full shadow-md my-8 rounded-2xl"
                   />
