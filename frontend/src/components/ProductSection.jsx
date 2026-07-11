@@ -66,6 +66,8 @@ export default function ProductGallery() {
             >
               <img
                 src={product.image}
+                loading="lazy"
+                decoding="async"
                 alt={product.title}
                 className="w-full h-[400px] object-cover transition-transform duration-500 group-hover:scale-110"
               />
@@ -109,6 +111,8 @@ export default function ProductGallery() {
 
               <img
                 src={selectedProduct.image}
+                loading="lazy"
+                decoding="async"
                 className="w-full h-64 object-cover rounded-2xl mb-8"
                 alt={selectedProduct.title}
               />

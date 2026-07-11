@@ -40,6 +40,9 @@ export default function HeroSection() {
       <div className="absolute inset-0 z-0">
         <img
           src={HeroImage}
+          loading="eager"
+          decoding="async"
+          fetchpriority="high"
           className="w-full h-full object-cover scale-105"
           alt="Ambulans Karoseri"
         />
