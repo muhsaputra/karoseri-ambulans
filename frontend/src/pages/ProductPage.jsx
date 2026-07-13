@@ -1,136 +1,21 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+
 import {
-  MdArrowForward,
-  MdCheckCircle,
-  MdLocalShipping,
-  MdShield,
-  MdSpeed,
+  MdDirectionsCar,
   MdConstruction,
-  MdClose,
-  MdArrowOutward,
   MdPeople,
   MdMonitorHeart,
-  MdDirectionsCar,
 } from "react-icons/md";
+
 import PageHeader from "../components/PageHeader";
 import ProductBg from "../assets/workshop-ambulans.webp";
 import Seo from "../components/Seo";
 
-const PRODUCTS = [
-  {
-    category: "Ambulance",
-    title: "Ambulans Transport",
-    desc: "Unit standar untuk pemindahan pasien non-gawat darurat dengan efisiensi maksimal.",
-    image:
-      "https://images.unsplash.com/photo-1587732606368-80e9275031b2?q=80&w=800&auto=format&fit=crop",
-    specs: ["Sasis Standar", "Interior Fiber", "AC Double Blower"],
-    idealFor: "Rujukan terjadwal dan pemindahan pasien yang stabil.",
-    capacity: "2–3 kru medis",
-    leadTime: "Estimasi 30–45 hari kerja",
-  },
-  {
-    category: "Ambulance",
-    title: "Ambulans Gawat Darurat",
-    desc: "Dilengkapi peralatan medis canggih untuk penanganan kondisi kritis di lapangan.",
-    image:
-      "https://images.unsplash.com/photo-1579684385327-444458f31007?q=80&w=800&auto=format&fit=crop",
-    specs: ["Stretcher Scoop", "Oxygen System", "Sirene Multi-Tone"],
-    idealFor: "Respons medis cepat dan penanganan kondisi kritis di lapangan.",
-    capacity: "3–4 kru medis",
-    leadTime: "Estimasi 45–60 hari kerja",
-  },
-  {
-    category: "Ambulance",
-    title: "Ambulans ICU",
-    desc: "Mobile ICU dengan standar rumah sakit untuk penanganan pasien intensif.",
-    image:
-      "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800&auto=format&fit=crop",
-    specs: ["Ventilator", "Patient Monitor", "Defibrillator"],
-    idealFor: "Perawatan intensif dengan dukungan peralatan medis lanjutan.",
-    capacity: "3–4 kru medis",
-    leadTime: "Estimasi sesuai konfigurasi",
-  },
-  {
-    category: "Ambulance",
-    title: "Ambulans ICU",
-    desc: "Mobile ICU dengan standar rumah sakit untuk penanganan pasien intensif.",
-    image:
-      "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800&auto=format&fit=crop",
-    specs: ["Ventilator", "Patient Monitor", "Defibrillator"],
-    idealFor: "Perawatan intensif dengan dukungan peralatan medis lanjutan.",
-    capacity: "3–4 kru medis",
-    leadTime: "Estimasi sesuai konfigurasi",
-  },
-  {
-    category: "Mobil Jenazah",
-    title: "Ambulans ICU",
-    desc: "Mobile ICU dengan standar rumah sakit untuk penanganan pasien intensif.",
-    image:
-      "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800&auto=format&fit=crop",
-    specs: ["Ventilator", "Patient Monitor", "Defibrillator"],
-    idealFor: "Perawatan intensif dengan dukungan peralatan medis lanjutan.",
-    capacity: "3–4 kru medis",
-    leadTime: "Estimasi sesuai konfigurasi",
-  },
-  {
-    category: "Mobil Jenazah",
-    title: "Ambulans ICU",
-    desc: "Mobile ICU dengan standar rumah sakit untuk penanganan pasien intensif.",
-    image:
-      "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800&auto=format&fit=crop",
-    specs: ["Ventilator", "Patient Monitor", "Defibrillator"],
-    idealFor: "Perawatan intensif dengan dukungan peralatan medis lanjutan.",
-    capacity: "3–4 kru medis",
-    leadTime: "Estimasi sesuai konfigurasi",
-  },
-  {
-    category: "Part Tambahan",
-    title: "Ambulans ICU",
-    desc: "Mobile ICU dengan standar rumah sakit untuk penanganan pasien intensif.",
-    image:
-      "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800&auto=format&fit=crop",
-    specs: ["Ventilator", "Patient Monitor", "Defibrillator"],
-    idealFor: "Perawatan intensif dengan dukungan peralatan medis lanjutan.",
-    capacity: "3–4 kru medis",
-    leadTime: "Estimasi sesuai konfigurasi",
-  },
-  {
-    category: "Part Tambahan",
-    title: "Ambulans ICU",
-    desc: "Mobile ICU dengan standar rumah sakit untuk penanganan pasien intensif.",
-    image:
-      "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800&auto=format&fit=crop",
-    specs: ["Ventilator", "Patient Monitor", "Defibrillator"],
-    idealFor: "Perawatan intensif dengan dukungan peralatan medis lanjutan.",
-    capacity: "3–4 kru medis",
-    leadTime: "Estimasi sesuai konfigurasi",
-  },
-  {
-    category: "Part Tambahan",
-    title: "Ambulans ICU",
-    desc: "Mobile ICU dengan standar rumah sakit untuk penanganan pasien intensif.",
-    image:
-      "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800&auto=format&fit=crop",
-    specs: ["Ventilator", "Patient Monitor", "Defibrillator"],
-    idealFor: "Perawatan intensif dengan dukungan peralatan medis lanjutan.",
-    capacity: "3–4 kru medis",
-    leadTime: "Estimasi sesuai konfigurasi",
-  },
-  {
-    category: "Part Tambahan",
-    title: "Ambulans ICU",
-    desc: "Mobile ICU dengan standar rumah sakit untuk penanganan pasien intensif.",
-    image:
-      "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800&auto=format&fit=crop",
-    specs: ["Ventilator", "Patient Monitor", "Defibrillator"],
-    idealFor: "Perawatan intensif dengan dukungan peralatan medis lanjutan.",
-    capacity: "3–4 kru medis",
-    leadTime: "Estimasi sesuai konfigurasi",
-  },
-];
+import { getProducts } from "../data/products";
+import ProductCard from "../components/product/ProductCard";
 
-const CATEGORIES = ["Semua", "Ambulance", "Mobil Jenazah", "Part Tambahan"];
+const CATEGORIES = ["Semua", "Ambulance"];
 
 // --- Sub-components for Professional Layout ---
 
@@ -171,18 +56,18 @@ const ComplianceSection = () => (
 );
 
 export default function ProductPage() {
+  const products = useMemo(() => getProducts(), []);
   const [activeCategory, setActiveCategory] = useState("Semua");
-  const [selectedProduct, setSelectedProduct] = useState(null);
 
   const filteredProducts =
     activeCategory === "Semua"
-      ? PRODUCTS
-      : PRODUCTS.filter((p) => p.category === activeCategory);
+      ? products
+      : products.filter((p) => p.category === activeCategory);
 
   const [showAllProducts, setShowAllProducts] = useState(false);
   const visibleProducts = showAllProducts
     ? filteredProducts
-    : filteredProducts.slice(0, 3);
+    : filteredProducts.slice(0, 6);
 
   return (
     <div className="bg-slate-50 min-h-screen">
@@ -236,72 +121,10 @@ export default function ProductPage() {
                 </p>
               </div>
             ) : (
-              visibleProducts.map((product, index) => (
-                <motion.div
-                  layout
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, scale: 0.9 }}
-                  key={`${product.category}-${product.title}-${index}`}
-                  className="group overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-sm transition-all duration-500 hover:-translate-y-2 hover:border-red-200 hover:shadow-2xl hover:shadow-[#071b3b]/10"
-                >
-                  <div className="h-64 overflow-hidden relative">
-                    <img
-                      src={product.image}
-                      loading="lazy"
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                      alt={product.title}
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60" />
-                    <span className="absolute bottom-4 left-4 rounded-full border border-white/20 bg-[#071b3b]/60 px-3 py-1 text-xs font-bold uppercase tracking-wider text-white backdrop-blur-md">
-                      {product.category}
-                    </span>
-                  </div>
-
-                  <div className="p-8">
-                    <h4 className="mb-3 text-2xl font-extrabold text-[#071b3b] transition-colors group-hover:text-red-600">
-                      {product.title}
-                    </h4>
-                    <p className="text-slate-500 mb-6 text-sm leading-relaxed">
-                      {product.desc}
-                    </p>
-                    <div className="mb-6 flex items-start gap-2 rounded-xl bg-slate-50 p-3 text-sm text-slate-600">
-                      <MdPeople className="mt-0.5 shrink-0 text-red-600" />
-                      <span>
-                        <strong className="text-[#071b3b]">Ideal untuk:</strong>{" "}
-                        {product.idealFor}
-                      </span>
-                    </div>
-
-                    <div className="flex flex-wrap gap-2 mb-8">
-                      {product.specs.map((spec, idx) => (
-                        <div
-                          key={idx}
-                          className="flex items-center gap-1.5 rounded-lg bg-red-50 px-3 py-1 text-xs font-semibold text-red-700"
-                        >
-                          <MdCheckCircle className="text-red-500" /> {spec}
-                        </div>
-                      ))}
-                    </div>
-
-                    <div className="grid grid-cols-2 gap-3">
-                      <button
-                        onClick={() => setSelectedProduct(product)}
-                        className="rounded-2xl border border-slate-200 py-3.5 text-sm font-bold text-[#071b3b] transition-colors hover:border-red-300 hover:text-red-600"
-                      >
-                        Detail unit
-                      </button>
-                      <a
-                        href={`https://wa.me/628111222183?text=Halo%20Karoseri%20Ambulans%2C%20saya%20tertarik%20dengan%20${encodeURIComponent(product.title)}.`}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="flex items-center justify-center gap-1 rounded-2xl bg-[#071b3b] py-3.5 text-sm font-bold text-white transition-all hover:bg-red-600"
-                      >
-                        Konsultasi <MdArrowForward />
-                      </a>
-                    </div>
-                  </div>
-                </motion.div>
+              visibleProducts.map((product) => (
+                <div key={product.slug}>
+                  <ProductCard product={product} />
+                </div>
               ))
             )}
           </AnimatePresence>
@@ -397,84 +220,6 @@ export default function ProductPage() {
           Konsultasi Custom Build
         </a>
       </section>
-
-      <AnimatePresence>
-        {selectedProduct && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            onClick={() => setSelectedProduct(null)}
-            className="fixed inset-0 z-[70] flex items-end bg-[#071b3b]/70 p-3 backdrop-blur-sm md:items-center md:justify-center md:p-6"
-          >
-            <motion.div
-              initial={{ opacity: 0, y: 24 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: 24 }}
-              onClick={(event) => event.stopPropagation()}
-              className="relative w-full max-w-3xl overflow-hidden rounded-3xl bg-white shadow-2xl"
-            >
-              <button
-                onClick={() => setSelectedProduct(null)}
-                aria-label="Tutup detail unit"
-                className="absolute right-4 top-4 z-10 rounded-full bg-white/90 p-2 text-[#071b3b] shadow-lg"
-              >
-                <MdClose className="text-xl" />
-              </button>
-              <div className="grid md:grid-cols-2">
-                <img
-                  src={selectedProduct.image}
-                  alt={selectedProduct.title}
-                  className="h-64 w-full object-cover md:h-full"
-                />
-                <div className="p-7 md:p-9">
-                  <p className="text-xs font-bold uppercase tracking-[0.18em] text-red-600">
-                    {selectedProduct.category}
-                  </p>
-                  <h2 className="mt-3 text-3xl font-bold text-[#071b3b]">
-                    {selectedProduct.title}
-                  </h2>
-                  <p className="mt-4 leading-relaxed text-slate-600">
-                    {selectedProduct.desc}
-                  </p>
-                  <dl className="my-6 grid grid-cols-2 gap-3 text-sm">
-                    <div className="rounded-xl bg-slate-50 p-3">
-                      <dt className="text-slate-500">Kapasitas</dt>
-                      <dd className="mt-1 font-bold text-[#071b3b]">
-                        {selectedProduct.capacity}
-                      </dd>
-                    </div>
-                    <div className="rounded-xl bg-slate-50 p-3">
-                      <dt className="text-slate-500">Pengerjaan</dt>
-                      <dd className="mt-1 font-bold text-[#071b3b]">
-                        {selectedProduct.leadTime}
-                      </dd>
-                    </div>
-                  </dl>
-                  <div className="space-y-2 border-t border-slate-100 pt-5">
-                    {selectedProduct.specs.map((spec) => (
-                      <p
-                        key={spec}
-                        className="flex items-center gap-2 text-sm font-medium text-slate-700"
-                      >
-                        <MdCheckCircle className="text-red-600" /> {spec}
-                      </p>
-                    ))}
-                  </div>
-                  <a
-                    href={`https://wa.me/6281234567890?text=Halo%20Karoseri%20Ambulans%2C%20saya%20ingin%20mendiskusikan%20${encodeURIComponent(selectedProduct.title)}.`}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="mt-7 flex items-center justify-center gap-2 rounded-xl bg-red-600 py-3.5 font-bold text-white transition-colors hover:bg-red-700"
-                  >
-                    Diskusikan unit ini <MdArrowOutward />
-                  </a>
-                </div>
-              </div>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
     </div>
   );
 }

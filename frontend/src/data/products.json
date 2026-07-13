@@ -1,0 +1,248 @@
+[
+  {
+    "slug": "ambulans-transport",
+    "category": "Ambulance",
+    "name": "Ambulans Transport",
+    "shortDescription": "Unit standar pemindahan pasien non-gawat darurat dengan kenyamanan maksimal.",
+    "startingPrice": 250000000,
+    "highlights": [
+      "Sasis dan integrasi standar yang rapi",
+      "Material interior mudah dibersihkan",
+      "Sistem HVAC double blower"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1587732606368-80e9275031b2?q=80&w=1600&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1581092919535-1f9b1f0a1b1a?q=80&w=1600&auto=format&fit=crop"
+    ],
+    "images": {
+      "interior": [
+        "https://images.unsplash.com/photo-1581092919535-1f9b1f0a1b1a?q=80&w=1600&auto=format&fit=crop"
+      ],
+      "exterior": [
+        "https://images.unsplash.com/photo-1587732606368-80e9275031b2?q=80&w=1600&auto=format&fit=crop"
+      ]
+    },
+    "quickSpecs": {
+      "Capacity": "2–3 kru medis",
+      "Chassis": "Sasis standar",
+      "Engine": "Konfigurasi sesuai unit dasar",
+      "Transmission": "Otomatis/Manual (opsional)",
+      "Medical Equipment": "Rangkaian standar medis"
+    },
+    "specTable": {
+      "rows": [
+        { "label": "Kapasitas", "value": "2–3 kru medis" },
+        { "label": "Chassis", "value": "Sasis standar" },
+        { "label": "Engine", "value": "Konfigurasi sesuai unit dasar" },
+        { "label": "Transmisi", "value": "Otomatis/Manual (opsional)" },
+        { "label": "Sistem HVAC", "value": "AC double blower" }
+      ]
+    },
+    "features": [
+      "Interior fiber berstandar kebersihan",
+      "Akses kontrol yang ergonomis",
+      "Pencahayaan interior merata"
+    ],
+    "equipment": [
+      {
+        "name": "AC double blower",
+        "notes": "Suhu stabil untuk penggunaan panjang"
+      },
+      { "name": "Panel kontrol", "notes": "Akses cepat untuk kru medis" },
+      {
+        "name": "Ruang instalasi",
+        "notes": "Sirkulasi kabel dan peralatan rapi"
+      }
+    ],
+    "advantages": [
+      "Rapi dan mudah dirawat",
+      "Kenyamanan kru dan pasien",
+      "Kualitas pengerjaan konsisten"
+    ],
+    "useCases": [
+      "Rujukan terjadwal",
+      "Pemindahan pasien non-gawat darurat",
+      "Operasional medis rutin"
+    ],
+    "faq": [
+      {
+        "question": "Apakah bisa custom warna interior?",
+        "answer": "Bisa. Kami menyediakan opsi material dan warna sesuai preferensi dan kebutuhan medis."
+      },
+      {
+        "question": "Estimasi waktu pengerjaan?",
+        "answer": "Rata-rata 30–45 hari kerja tergantung tingkat kustomisasi."
+      }
+    ],
+    "testimonial": {
+      "name": "Tim Medis Rumah Sakit",
+      "role": "Pengadaan Kendaraan Medis",
+      "quote": "Kami mendapatkan unit dengan finishing premium dan layout yang sangat membantu operasional di lapangan."
+    },
+    "related": ["ambulans-igd", "ambulans-icu"],
+    "downloadBrochureLabel": "Unduh Brosur Ambulans Transport",
+    "downloadBrochureUrl": "https://example.com/brosur/ambulans-transport.pdf",
+    "whatsappText": "Halo Karoseri Ambulans, saya tertarik dengan ${name}. Mohon info spesifikasi dan penawaran."
+  },
+  {
+    "slug": "ambulans-igd",
+    "category": "Ambulance",
+    "name": "Ambulans Gawat Darurat",
+    "shortDescription": "Peralatan medis canggih untuk penanganan kondisi kritis di lapangan.",
+    "startingPrice": 390000000,
+    "highlights": [
+      "Oxygen system dan setup darurat",
+      "Emergency light dan sirene multi-tone",
+      "Layout siap respons cepat"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1579684385327-444458f31007?q=80&w=1600&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1542621385-9f3f5a2c2f2f?q=80&w=1600&auto=format&fit=crop"
+    ],
+    "images": {
+      "interior": [
+        "https://images.unsplash.com/photo-1542621385-9f3f5a2c2f2f?q=80&w=1600&auto=format&fit=crop"
+      ],
+      "exterior": [
+        "https://images.unsplash.com/photo-1579684385327-444458f31007?q=80&w=1600&auto=format&fit=crop"
+      ]
+    },
+    "quickSpecs": {
+      "Capacity": "3–4 kru medis",
+      "Chassis": "Konfigurasi chassis unit dasar",
+      "Engine": "Konfigurasi sesuai unit dasar",
+      "Transmission": "Otomatis/Manual (opsional)",
+      "Medical Equipment": "Stretcher scoop, oxygen system, emergency setup"
+    },
+    "specTable": {
+      "rows": [
+        { "label": "Kapasitas", "value": "3–4 kru medis" },
+        { "label": "Chassis", "value": "Konfigurasi chassis unit dasar" },
+        { "label": "Engine", "value": "Konfigurasi sesuai unit dasar" },
+        { "label": "Transmisi", "value": "Otomatis/Manual (opsional)" },
+        {
+          "label": "Sistem Darurat",
+          "value": "Emergency light + sirene multi-tone"
+        }
+      ]
+    },
+    "features": [
+      "Ruang kerja kru dengan akses cepat",
+      "Penempatan peralatan medis yang terstandar",
+      "Sistem pencahayaan dan alarm"
+    ],
+    "equipment": [
+      { "name": "Stretcher scoop", "notes": "Siap angkut cepat" },
+      { "name": "Oxygen system", "notes": "Dukungan oksigen selama respon" },
+      { "name": "Sirene multi-tone", "notes": "Notifikasi respons cepat" }
+    ],
+    "advantages": [
+      "Tersusun untuk respons darurat",
+      "Mudah dibersihkan dan dirawat",
+      "Kompatibel untuk berbagai protokol medis"
+    ],
+    "useCases": [
+      "Respons medis darurat",
+      "Evakuasi jarak sedang",
+      "Layanan gawat darurat operasional"
+    ],
+    "faq": [
+      {
+        "question": "Apakah bisa integrasi peralatan tambahan?",
+        "answer": "Bisa. Kami menyesuaikan layout sesuai daftar peralatan yang dibutuhkan."
+      }
+    ],
+    "testimonial": {
+      "name": "Operator IGD",
+      "role": "Koordinator Lapangan",
+      "quote": "Layoutnya membuat proses penanganan lebih cepat, dan tampilan interiornya rapi seperti unit premium."
+    },
+    "related": ["ambulans-transport", "ambulans-icu"],
+    "downloadBrochureLabel": "Unduh Brosur Ambulans Gawat Darurat",
+    "downloadBrochureUrl": "https://example.com/brosur/ambulans-igd.pdf",
+    "whatsappText": "Halo Karoseri Ambulans, saya tertarik dengan ${name}. Mohon info spesifikasi dan penawaran."
+  },
+  {
+    "slug": "ambulans-icu",
+    "category": "Ambulance",
+    "name": "Ambulans ICU",
+    "shortDescription": "Mobile ICU dengan standar rumah sakit untuk penanganan pasien intensif.",
+    "startingPrice": 540000000,
+    "highlights": [
+      "Ventilator & patient monitor",
+      "Defibrillator dan suction pump",
+      "Layout untuk perawatan intensif"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=1600&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?q=80&w=1600&auto=format&fit=crop"
+    ],
+    "images": {
+      "interior": [
+        "https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?q=80&w=1600&auto=format&fit=crop"
+      ],
+      "exterior": [
+        "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=1600&auto=format&fit=crop"
+      ]
+    },
+    "quickSpecs": {
+      "Capacity": "3–4 kru medis",
+      "Chassis": "Konfigurasi chassis unit dasar",
+      "Engine": "Konfigurasi sesuai unit dasar",
+      "Transmission": "Otomatis/Manual (opsional)",
+      "Medical Equipment": "Ventilator, patient monitor, defibrillator"
+    },
+    "specTable": {
+      "rows": [
+        { "label": "Kapasitas", "value": "3–4 kru medis" },
+        { "label": "Chassis", "value": "Konfigurasi chassis unit dasar" },
+        { "label": "Engine", "value": "Konfigurasi sesuai unit dasar" },
+        { "label": "Transmisi", "value": "Otomatis/Manual (opsional)" },
+        {
+          "label": "Peralatan ICU",
+          "value": "Ventilator + monitor + defibrillator"
+        }
+      ]
+    },
+    "features": [
+      "Standar ruang ICU yang fungsional",
+      "Komponen pendukung medis terintegrasi",
+      "Manajemen kabel dan akses peralatan"
+    ],
+    "equipment": [
+      { "name": "Ventilator", "notes": "Dukungan respirasi intensif" },
+      { "name": "Patient Monitor", "notes": "Pemantauan tanda vital" },
+      { "name": "Defibrillator", "notes": "Siap untuk kondisi kritis" },
+      { "name": "Suction pump", "notes": "Penghisapan dan pembersihan" }
+    ],
+    "advantages": [
+      "Mirip layout ICU rumah sakit",
+      "Stabil untuk penggunaan intensif",
+      "Finishing rapi dan premium"
+    ],
+    "useCases": [
+      "Transport pasien intensif",
+      "Rujukan ICU",
+      "Evakuasi pasien kritis"
+    ],
+    "faq": [
+      {
+        "question": "Apakah bisa menyesuaikan kebutuhan ICU rumah sakit kami?",
+        "answer": "Ya. Kami menyesuaikan layout dan integrasi peralatan sesuai standar klinis Anda."
+      },
+      {
+        "question": "Estimasi waktu pengerjaan?",
+        "answer": "Estimasi sesuai konfigurasi dan tingkat integrasi peralatan medis."
+      }
+    ],
+    "testimonial": {
+      "name": "Direktur Operasional",
+      "role": "Konsultan Layanan Mobil ICU",
+      "quote": "Pengalaman penggunaan sangat baik—rapi, fungsional, dan terlihat premium dari luar sampai interior."
+    },
+    "related": ["ambulans-transport", "ambulans-igd"],
+    "downloadBrochureLabel": "Unduh Brosur Ambulans ICU",
+    "downloadBrochureUrl": "https://example.com/brosur/ambulans-icu.pdf",
+    "whatsappText": "Halo Karoseri Ambulans, saya tertarik dengan ${name}. Mohon info spesifikasi dan penawaran."
+  }
+]
