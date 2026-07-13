@@ -71,14 +71,15 @@ export default function BlogSection() {
       <div className="mx-auto max-w-7xl">
         <div className="text-center mb-14">
           <p className="mb-3 text-sm font-bold tracking-[0.18em] uppercase text-red-600">
-            Blog & Insight
+            Berita & Artikel
           </p>
           <h3 className="text-4xl font-bold tracking-tight text-[#071b3b] md:text-5xl">
-            UI/UX, Engineering, dan Quality Control
+            Wawasan & Informasi Terkini
           </h3>
           <p className="mx-auto mt-4 max-w-2xl text-slate-600">
-            Artikel singkat dari CMS untuk membantu Anda memahami proses desain
-            dan manufaktur ambulans.
+            Temukan berita terbaru, tips, dan wawasan seputar dunia karoseri
+            Ambulans. Dari inovasi teknologi hingga praktik terbaik, kami
+            hadirkan informasi yang relevan untuk Anda.
           </p>
         </div>
 
