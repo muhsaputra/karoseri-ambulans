@@ -1,7 +1,7 @@
 import { useMemo } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import { MdArrowBack } from "react-icons/md";
+import { MdArrowBack, MdWhatsapp } from "react-icons/md";
 
 import Seo from "../components/Seo";
 import {

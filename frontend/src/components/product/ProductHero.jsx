@@ -6,6 +6,7 @@ import {
   MdOutlineKeyboardArrowRight,
   MdOutlineClose,
   MdArrowBack,
+  MdWhatsapp,
 } from "react-icons/md";
 
 import { formatCurrencyIDR } from "./utils";
