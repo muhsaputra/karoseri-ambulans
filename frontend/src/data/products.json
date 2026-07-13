@@ -1,14 +1,14 @@
 [
   {
-    "slug": "ambulans-transport",
+    "slug": "ambulans-medis-ekonomis",
     "category": "Ambulance",
-    "name": "Ambulans Transport",
+    "name": "Ambulance Medis Ekonomis",
     "shortDescription": "Unit standar pemindahan pasien non-gawat darurat dengan kenyamanan maksimal.",
     "startingPrice": 250000000,
     "highlights": [
       "Sasis dan integrasi standar yang rapi",
       "Material interior mudah dibersihkan",
-      "Sistem HVAC double blower"
+      "Sistem HV`AC dou`ble blower"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1587732606368-80e9275031b2?q=80&w=1600&auto=format&fit=crop",
@@ -31,33 +31,52 @@
     },
     "specTable": {
       "rows": [
-        { "label": "Kapasitas", "value": "2–3 kru medis" },
-        { "label": "Chassis", "value": "Sasis standar" },
-        { "label": "Engine", "value": "Konfigurasi sesuai unit dasar" },
-        { "label": "Transmisi", "value": "Otomatis/Manual (opsional)" },
-        { "label": "Sistem HVAC", "value": "AC double blower" }
+        {
+          "label": "Kelistrikan",
+          "value": "Lampu Ambulance Dan Sirine Mic, Lampu Sorot Belakang, Lampu Pasien, Lampu Pasien Model Slide"
+        },
+        {
+          "label": "Interior",
+          "value": "Lantai Vinyl Antibakteri, Bangku Pengantar (Lengkap dengan Seatbelt)"
+        },
+        {
+          "label": "Peralatan Medis + Regulator Flow Meter",
+          "value": "Stretcher (Bed Pasien), Base Landasan, Rel Kuncian dan Stopper, Gantungan Infus, Oksigen Regulator Flow Meter dan Bracket, Kotak P3K"
+        },
+        {
+          "label": "Keselamatan",
+          "value": "APAR 1 Kg dan Bracket"
+        },
+        { "label": "Eksterior", "value": "Branding Sticker, Bumper Stainless" }
       ]
     },
     "features": [
-      "Interior fiber berstandar kebersihan",
-      "Akses kontrol yang ergonomis",
-      "Pencahayaan interior merata"
+      "Fungsianalitas 3-in-1: Jemaah Sakit, Pemulihan, Pengantaran Jenazah.",
+      "Siap Pakai(Ready For Duty): Peralatan Medis Inti Terinstalasi Standar.",
+      "Investasi Efisien: Tepat Guna & Hemat Anggaran"
     ],
     "equipment": [
       {
-        "name": "AC double blower",
-        "notes": "Suhu stabil untuk penggunaan panjang"
+        "name": "Ranjang Strecher",
+        "notes": "Memudahkan evakuasi dan transportasi pasien."
       },
-      { "name": "Panel kontrol", "notes": "Akses cepat untuk kru medis" },
       {
-        "name": "Ruang instalasi",
-        "notes": "Sirkulasi kabel dan peralatan rapi"
+        "name": "Set Oksigen + Regulator Flow Meter",
+        "notes": "Menyediakan suplai oksigen saat penanganan pasien."
+      },
+      {
+        "name": "Lantai Vinyl Anti Bakteri",
+        "notes": "Higienis, tahan air, dan mudah dibersihkan."
+      },
+      {
+        "name": "keranda & Kanin Borditi",
+        "notes": "Perlengkapan transportasi jenazah yang rapi dan aman."
       }
     ],
     "advantages": [
-      "Rapi dan mudah dirawat",
-      "Kenyamanan kru dan pasien",
-      "Kualitas pengerjaan konsisten"
+      "Fungsianalitas 3-in-1: Jemaah Sakit, Pemulihan, Pengantaran Jenazah.",
+      "Siap Pakai(Ready For Duty): Peralatan Medis Inti Terinstalasi Standar.",
+      "Investasi Efisien: Tepat Guna & Hemat Anggaran"
     ],
     "useCases": [
       "Rujukan terjadwal",
@@ -85,164 +104,523 @@
     "whatsappText": "Halo Karoseri Ambulans, saya tertarik dengan ${name}. Mohon info spesifikasi dan penawaran."
   },
   {
-    "slug": "ambulans-igd",
+    "slug": "ambulans-medis-spesial",
     "category": "Ambulance",
-    "name": "Ambulans Gawat Darurat",
-    "shortDescription": "Peralatan medis canggih untuk penanganan kondisi kritis di lapangan.",
-    "startingPrice": 390000000,
+    "name": "Ambulance Medis Spesial",
+    "shortDescription": "Ambulans dengan perlengkapan medis lengkap, dirancang untuk memberikan pelayanan kesehatan yang aman, nyaman, dan siap operasional.",
+    "startingPrice": 250000000,
     "highlights": [
-      "Oxygen system dan setup darurat",
-      "Emergency light dan sirene multi-tone",
-      "Layout siap respons cepat"
+      "Sasis dan integrasi standar yang rapi",
+      "Material interior mudah dibersihkan",
+      "Sistem HV`AC dou`ble blower"
     ],
     "gallery": [
-      "https://images.unsplash.com/photo-1579684385327-444458f31007?q=80&w=1600&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1542621385-9f3f5a2c2f2f?q=80&w=1600&auto=format&fit=crop"
+      "https://images.unsplash.com/photo-1587732606368-80e9275031b2?q=80&w=1600&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1581092919535-1f9b1f0a1b1a?q=80&w=1600&auto=format&fit=crop"
     ],
     "images": {
       "interior": [
-        "https://images.unsplash.com/photo-1542621385-9f3f5a2c2f2f?q=80&w=1600&auto=format&fit=crop"
+        "https://images.unsplash.com/photo-1581092919535-1f9b1f0a1b1a?q=80&w=1600&auto=format&fit=crop"
       ],
       "exterior": [
-        "https://images.unsplash.com/photo-1579684385327-444458f31007?q=80&w=1600&auto=format&fit=crop"
+        "https://images.unsplash.com/photo-1587732606368-80e9275031b2?q=80&w=1600&auto=format&fit=crop"
       ]
     },
     "quickSpecs": {
-      "Capacity": "3–4 kru medis",
-      "Chassis": "Konfigurasi chassis unit dasar",
+      "Capacity": "2–3 kru medis",
+      "Chassis": "Sasis standar",
       "Engine": "Konfigurasi sesuai unit dasar",
       "Transmission": "Otomatis/Manual (opsional)",
-      "Medical Equipment": "Stretcher scoop, oxygen system, emergency setup"
+      "Medical Equipment": "Rangkaian standar medis"
     },
     "specTable": {
       "rows": [
-        { "label": "Kapasitas", "value": "3–4 kru medis" },
-        { "label": "Chassis", "value": "Konfigurasi chassis unit dasar" },
-        { "label": "Engine", "value": "Konfigurasi sesuai unit dasar" },
-        { "label": "Transmisi", "value": "Otomatis/Manual (opsional)" },
         {
-          "label": "Sistem Darurat",
-          "value": "Emergency light + sirene multi-tone"
-        }
+          "label": "Kelistrikan",
+          "value": "Lampu Ambulance Dan Sirine Mic, Lampu Sorot Belakang, Lampu Pasien, Lampu Pasien Model Slide"
+        },
+        {
+          "label": "Interior",
+          "value": "Lantai Vinyl Antibakteri, Bangku Pengantar (Lengkap dengan Seatbelt)"
+        },
+        {
+          "label": "Peralatan Medis + Regulator Flow Meter",
+          "value": "Stretcher (Bed Pasien), Base Landasan, Rel Kuncian dan Stopper, Gantungan Infus, Oksigen Regulator Flow Meter dan Bracket, Kotak P3K"
+        },
+        {
+          "label": "Keselamatan",
+          "value": "APAR 1 Kg dan Bracket"
+        },
+        { "label": "Eksterior", "value": "Branding Sticker, Bumper Stainless" }
       ]
     },
     "features": [
-      "Ruang kerja kru dengan akses cepat",
-      "Penempatan peralatan medis yang terstandar",
-      "Sistem pencahayaan dan alarm"
+      "Fungsianalitas 3-in-1: Jemaah Sakit, Pemulihan, Pengantaran Jenazah.",
+      "Siap Pakai(Ready For Duty): Peralatan Medis Inti Terinstalasi Standar.",
+      "Investasi Efisien: Tepat Guna & Hemat Anggaran"
     ],
     "equipment": [
-      { "name": "Stretcher scoop", "notes": "Siap angkut cepat" },
-      { "name": "Oxygen system", "notes": "Dukungan oksigen selama respon" },
-      { "name": "Sirene multi-tone", "notes": "Notifikasi respons cepat" }
-    ],
-    "advantages": [
-      "Tersusun untuk respons darurat",
-      "Mudah dibersihkan dan dirawat",
-      "Kompatibel untuk berbagai protokol medis"
-    ],
-    "useCases": [
-      "Respons medis darurat",
-      "Evakuasi jarak sedang",
-      "Layanan gawat darurat operasional"
-    ],
-    "faq": [
       {
-        "question": "Apakah bisa integrasi peralatan tambahan?",
-        "answer": "Bisa. Kami menyesuaikan layout sesuai daftar peralatan yang dibutuhkan."
+        "name": "Ranjang Strecher",
+        "notes": "Memudahkan evakuasi dan transportasi pasien."
+      },
+      {
+        "name": "Set Oksigen + Regulator Flow Meter",
+        "notes": "Menyediakan suplai oksigen saat penanganan pasien."
+      },
+      {
+        "name": "Lantai Vinyl Anti Bakteri",
+        "notes": "Higienis, tahan air, dan mudah dibersihkan."
+      },
+      {
+        "name": "keranda & Kanin Borditi",
+        "notes": "Perlengkapan transportasi jenazah yang rapi dan aman."
       }
     ],
-    "testimonial": {
-      "name": "Operator IGD",
-      "role": "Koordinator Lapangan",
-      "quote": "Layoutnya membuat proses penanganan lebih cepat, dan tampilan interiornya rapi seperti unit premium."
-    },
-    "related": ["ambulans-transport", "ambulans-icu"],
-    "downloadBrochureLabel": "Unduh Brosur Ambulans Gawat Darurat",
-    "downloadBrochureUrl": "https://example.com/brosur/ambulans-igd.pdf",
-    "whatsappText": "Halo Karoseri Ambulans, saya tertarik dengan ${name}. Mohon info spesifikasi dan penawaran."
-  },
-  {
-    "slug": "ambulans-icu",
-    "category": "Ambulance",
-    "name": "Ambulans ICU",
-    "shortDescription": "Mobile ICU dengan standar rumah sakit untuk penanganan pasien intensif.",
-    "startingPrice": 540000000,
-    "highlights": [
-      "Ventilator & patient monitor",
-      "Defibrillator dan suction pump",
-      "Layout untuk perawatan intensif"
-    ],
-    "gallery": [
-      "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=1600&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?q=80&w=1600&auto=format&fit=crop"
-    ],
-    "images": {
-      "interior": [
-        "https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?q=80&w=1600&auto=format&fit=crop"
-      ],
-      "exterior": [
-        "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=1600&auto=format&fit=crop"
-      ]
-    },
-    "quickSpecs": {
-      "Capacity": "3–4 kru medis",
-      "Chassis": "Konfigurasi chassis unit dasar",
-      "Engine": "Konfigurasi sesuai unit dasar",
-      "Transmission": "Otomatis/Manual (opsional)",
-      "Medical Equipment": "Ventilator, patient monitor, defibrillator"
-    },
-    "specTable": {
-      "rows": [
-        { "label": "Kapasitas", "value": "3–4 kru medis" },
-        { "label": "Chassis", "value": "Konfigurasi chassis unit dasar" },
-        { "label": "Engine", "value": "Konfigurasi sesuai unit dasar" },
-        { "label": "Transmisi", "value": "Otomatis/Manual (opsional)" },
-        {
-          "label": "Peralatan ICU",
-          "value": "Ventilator + monitor + defibrillator"
-        }
-      ]
-    },
-    "features": [
-      "Standar ruang ICU yang fungsional",
-      "Komponen pendukung medis terintegrasi",
-      "Manajemen kabel dan akses peralatan"
-    ],
-    "equipment": [
-      { "name": "Ventilator", "notes": "Dukungan respirasi intensif" },
-      { "name": "Patient Monitor", "notes": "Pemantauan tanda vital" },
-      { "name": "Defibrillator", "notes": "Siap untuk kondisi kritis" },
-      { "name": "Suction pump", "notes": "Penghisapan dan pembersihan" }
-    ],
     "advantages": [
-      "Mirip layout ICU rumah sakit",
-      "Stabil untuk penggunaan intensif",
-      "Finishing rapi dan premium"
+      "Fungsianalitas 3-in-1: Jemaah Sakit, Pemulihan, Pengantaran Jenazah.",
+      "Siap Pakai(Ready For Duty): Peralatan Medis Inti Terinstalasi Standar.",
+      "Investasi Efisien: Tepat Guna & Hemat Anggaran"
     ],
     "useCases": [
-      "Transport pasien intensif",
-      "Rujukan ICU",
-      "Evakuasi pasien kritis"
+      "Rujukan terjadwal",
+      "Pemindahan pasien non-gawat darurat",
+      "Operasional medis rutin"
     ],
     "faq": [
       {
-        "question": "Apakah bisa menyesuaikan kebutuhan ICU rumah sakit kami?",
-        "answer": "Ya. Kami menyesuaikan layout dan integrasi peralatan sesuai standar klinis Anda."
+        "question": "Apakah bisa custom warna interior?",
+        "answer": "Bisa. Kami menyediakan opsi material dan warna sesuai preferensi dan kebutuhan medis."
       },
       {
         "question": "Estimasi waktu pengerjaan?",
-        "answer": "Estimasi sesuai konfigurasi dan tingkat integrasi peralatan medis."
+        "answer": "Rata-rata 30–45 hari kerja tergantung tingkat kustomisasi."
       }
     ],
     "testimonial": {
-      "name": "Direktur Operasional",
-      "role": "Konsultan Layanan Mobil ICU",
-      "quote": "Pengalaman penggunaan sangat baik—rapi, fungsional, dan terlihat premium dari luar sampai interior."
+      "name": "Tim Medis Rumah Sakit",
+      "role": "Pengadaan Kendaraan Medis",
+      "quote": "Kami mendapatkan unit dengan finishing premium dan layout yang sangat membantu operasional di lapangan."
     },
-    "related": ["ambulans-transport", "ambulans-igd"],
-    "downloadBrochureLabel": "Unduh Brosur Ambulans ICU",
-    "downloadBrochureUrl": "https://example.com/brosur/ambulans-icu.pdf",
+    "related": ["ambulans-igd", "ambulans-icu"],
+    "downloadBrochureLabel": "Unduh Brosur Ambulans Transport",
+    "downloadBrochureUrl": "https://example.com/brosur/ambulans-transport.pdf",
+    "whatsappText": "Halo Karoseri Ambulans, saya tertarik dengan ${name}. Mohon info spesifikasi dan penawaran."
+  },
+  {
+    "slug": "ambulans-multifungsi-spesial",
+    "category": "Mobil Multifungsi",
+    "name": "Ambulance Multifungsi Spesial",
+    "shortDescription": "Ambulans multifungsi dengan perlengkapan lebih lengkap, dirancang untuk mendukung berbagai kebutuhan pelayanan medis secara aman dan profesional.",
+    "startingPrice": 250000000,
+    "highlights": [
+      "Sasis dan integrasi standar yang rapi",
+      "Material interior mudah dibersihkan",
+      "Sistem HV`AC dou`ble blower"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1587732606368-80e9275031b2?q=80&w=1600&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1581092919535-1f9b1f0a1b1a?q=80&w=1600&auto=format&fit=crop"
+    ],
+    "images": {
+      "interior": [
+        "https://images.unsplash.com/photo-1581092919535-1f9b1f0a1b1a?q=80&w=1600&auto=format&fit=crop"
+      ],
+      "exterior": [
+        "https://images.unsplash.com/photo-1587732606368-80e9275031b2?q=80&w=1600&auto=format&fit=crop"
+      ]
+    },
+    "quickSpecs": {
+      "Capacity": "2–3 kru medis",
+      "Chassis": "Sasis standar",
+      "Engine": "Konfigurasi sesuai unit dasar",
+      "Transmission": "Otomatis/Manual (opsional)",
+      "Medical Equipment": "Rangkaian standar medis"
+    },
+    "specTable": {
+      "rows": [
+        {
+          "label": "Kelistrikan",
+          "value": "Lampu Ambulance Dan Sirine Mic, Lampu Sorot Belakang, Lampu Pasien, Lampu Pasien Model Slide"
+        },
+        {
+          "label": "Interior",
+          "value": "Lantai Vinyl Antibakteri, Bangku Pengantar (Lengkap dengan Seatbelt)"
+        },
+        {
+          "label": "Peralatan Medis + Regulator Flow Meter",
+          "value": "Stretcher (Bed Pasien), Base Landasan, Rel Kuncian dan Stopper, Gantungan Infus, Oksigen Regulator Flow Meter dan Bracket, Kotak P3K"
+        },
+        {
+          "label": "Keselamatan",
+          "value": "APAR 1 Kg dan Bracket"
+        },
+        { "label": "Eksterior", "value": "Branding Sticker, Bumper Stainless" }
+      ]
+    },
+    "features": [
+      "Fungsianalitas 3-in-1: Jemaah Sakit, Pemulihan, Pengantaran Jenazah.",
+      "Siap Pakai(Ready For Duty): Peralatan Medis Inti Terinstalasi Standar.",
+      "Investasi Efisien: Tepat Guna & Hemat Anggaran"
+    ],
+    "equipment": [
+      {
+        "name": "Ranjang Strecher",
+        "notes": "Memudahkan evakuasi dan transportasi pasien."
+      },
+      {
+        "name": "Set Oksigen + Regulator Flow Meter",
+        "notes": "Menyediakan suplai oksigen saat penanganan pasien."
+      },
+      {
+        "name": "Lantai Vinyl Anti Bakteri",
+        "notes": "Higienis, tahan air, dan mudah dibersihkan."
+      },
+      {
+        "name": "keranda & Kanin Borditi",
+        "notes": "Perlengkapan transportasi jenazah yang rapi dan aman."
+      }
+    ],
+    "advantages": [
+      "Fungsianalitas 3-in-1: Jemaah Sakit, Pemulihan, Pengantaran Jenazah.",
+      "Siap Pakai(Ready For Duty): Peralatan Medis Inti Terinstalasi Standar.",
+      "Investasi Efisien: Tepat Guna & Hemat Anggaran"
+    ],
+    "useCases": [
+      "Rujukan terjadwal",
+      "Pemindahan pasien non-gawat darurat",
+      "Operasional medis rutin"
+    ],
+    "faq": [
+      {
+        "question": "Apakah bisa custom warna interior?",
+        "answer": "Bisa. Kami menyediakan opsi material dan warna sesuai preferensi dan kebutuhan medis."
+      },
+      {
+        "question": "Estimasi waktu pengerjaan?",
+        "answer": "Rata-rata 30–45 hari kerja tergantung tingkat kustomisasi."
+      }
+    ],
+    "testimonial": {
+      "name": "Tim Medis Rumah Sakit",
+      "role": "Pengadaan Kendaraan Medis",
+      "quote": "Kami mendapatkan unit dengan finishing premium dan layout yang sangat membantu operasional di lapangan."
+    },
+    "related": ["ambulans-medis", "ambulans-icu"],
+    "downloadBrochureLabel": "Unduh Brosur Ambulans Transport",
+    "downloadBrochureUrl": "https://example.com/brosur/ambulans-transport.pdf",
+    "whatsappText": "Halo Karoseri Ambulans, saya tertarik dengan ${name}. Mohon info spesifikasi dan penawaran."
+  },
+  {
+    "slug": "ambulans-multifungsi-ekonomis",
+    "category": "Mobil Multifungsi",
+    "name": "Ambulance Multifungsi Ekonomis",
+    "shortDescription": "Ambulans multifungsi dengan perlengkapan standar, siap digunakan untuk penjemputan pasien, pemulangan, dan pengantaran jenazah dengan biaya yang lebih ekonomis.",
+    "startingPrice": 250000000,
+    "highlights": [
+      "Sasis dan integrasi standar yang rapi",
+      "Material interior mudah dibersihkan",
+      "Sistem HV`AC dou`ble blower"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1587732606368-80e9275031b2?q=80&w=1600&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1581092919535-1f9b1f0a1b1a?q=80&w=1600&auto=format&fit=crop"
+    ],
+    "images": {
+      "interior": [
+        "https://images.unsplash.com/photo-1581092919535-1f9b1f0a1b1a?q=80&w=1600&auto=format&fit=crop"
+      ],
+      "exterior": [
+        "https://images.unsplash.com/photo-1587732606368-80e9275031b2?q=80&w=1600&auto=format&fit=crop"
+      ]
+    },
+    "quickSpecs": {
+      "Capacity": "2–3 kru medis",
+      "Chassis": "Sasis standar",
+      "Engine": "Konfigurasi sesuai unit dasar",
+      "Transmission": "Otomatis/Manual (opsional)",
+      "Medical Equipment": "Rangkaian standar medis"
+    },
+    "specTable": {
+      "rows": [
+        {
+          "label": "Kelistrikan",
+          "value": "Lampu Ambulance Dan Sirine Mic, Lampu Sorot Belakang, Lampu Pasien, Lampu Pasien Model Slide"
+        },
+        {
+          "label": "Interior",
+          "value": "Lantai Vinyl Antibakteri, Bangku Pengantar (Lengkap dengan Seatbelt)"
+        },
+        {
+          "label": "Peralatan Medis + Regulator Flow Meter",
+          "value": "Stretcher (Bed Pasien), Base Landasan, Rel Kuncian dan Stopper, Gantungan Infus, Oksigen Regulator Flow Meter dan Bracket, Kotak P3K"
+        },
+        {
+          "label": "Keselamatan",
+          "value": "APAR 1 Kg dan Bracket"
+        },
+        { "label": "Eksterior", "value": "Branding Sticker, Bumper Stainless" }
+      ]
+    },
+    "features": [
+      "Fungsianalitas 3-in-1: Jemaah Sakit, Pemulihan, Pengantaran Jenazah.",
+      "Siap Pakai(Ready For Duty): Peralatan Medis Inti Terinstalasi Standar.",
+      "Investasi Efisien: Tepat Guna & Hemat Anggaran"
+    ],
+    "equipment": [
+      {
+        "name": "Ranjang Strecher",
+        "notes": "Memudahkan evakuasi dan transportasi pasien."
+      },
+      {
+        "name": "Set Oksigen + Regulator Flow Meter",
+        "notes": "Menyediakan suplai oksigen saat penanganan pasien."
+      },
+      {
+        "name": "Lantai Vinyl Anti Bakteri",
+        "notes": "Higienis, tahan air, dan mudah dibersihkan."
+      },
+      {
+        "name": "keranda & Kanin Borditi",
+        "notes": "Perlengkapan transportasi jenazah yang rapi dan aman."
+      }
+    ],
+    "advantages": [
+      "Fungsianalitas 3-in-1: Jemaah Sakit, Pemulihan, Pengantaran Jenazah.",
+      "Siap Pakai(Ready For Duty): Peralatan Medis Inti Terinstalasi Standar.",
+      "Investasi Efisien: Tepat Guna & Hemat Anggaran"
+    ],
+    "useCases": [
+      "Rujukan terjadwal",
+      "Pemindahan pasien non-gawat darurat",
+      "Operasional medis rutin"
+    ],
+    "faq": [
+      {
+        "question": "Apakah bisa custom warna interior?",
+        "answer": "Bisa. Kami menyediakan opsi material dan warna sesuai preferensi dan kebutuhan medis."
+      },
+      {
+        "question": "Estimasi waktu pengerjaan?",
+        "answer": "Rata-rata 30–45 hari kerja tergantung tingkat kustomisasi."
+      }
+    ],
+    "testimonial": {
+      "name": "Tim Medis Rumah Sakit",
+      "role": "Pengadaan Kendaraan Medis",
+      "quote": "Kami mendapatkan unit dengan finishing premium dan layout yang sangat membantu operasional di lapangan."
+    },
+    "related": ["ambulans-igd", "ambulans-icu"],
+    "downloadBrochureLabel": "Unduh Brosur Ambulans Transport",
+    "downloadBrochureUrl": "https://example.com/brosur/ambulans-transport.pdf",
+    "whatsappText": "Halo Karoseri Ambulans, saya tertarik dengan ${name}. Mohon info spesifikasi dan penawaran."
+  },
+  {
+    "slug": "ambulans-jenazah-ekonomis",
+    "category": "Mobil Jenazah",
+    "name": "Ambulance Jenazah Ekonomis",
+    "shortDescription": "Ambulans jenazah dengan perlengkapan standar, dirancang untuk memberikan layanan transportasi jenazah yang aman, rapi, dan ekonomis.",
+    "startingPrice": 250000000,
+    "highlights": [
+      "Sasis dan integrasi standar yang rapi",
+      "Material interior mudah dibersihkan",
+      "Sistem HV`AC dou`ble blower"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1587732606368-80e9275031b2?q=80&w=1600&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1581092919535-1f9b1f0a1b1a?q=80&w=1600&auto=format&fit=crop"
+    ],
+    "images": {
+      "interior": [
+        "https://images.unsplash.com/photo-1581092919535-1f9b1f0a1b1a?q=80&w=1600&auto=format&fit=crop"
+      ],
+      "exterior": [
+        "https://images.unsplash.com/photo-1587732606368-80e9275031b2?q=80&w=1600&auto=format&fit=crop"
+      ]
+    },
+    "quickSpecs": {
+      "Capacity": "2–3 kru medis",
+      "Chassis": "Sasis standar",
+      "Engine": "Konfigurasi sesuai unit dasar",
+      "Transmission": "Otomatis/Manual (opsional)",
+      "Medical Equipment": "Rangkaian standar medis"
+    },
+    "specTable": {
+      "rows": [
+        {
+          "label": "Kelistrikan",
+          "value": "Lampu Ambulance Dan Sirine Mic, Lampu Sorot Belakang, Lampu Pasien, Lampu Pasien Model Slide"
+        },
+        {
+          "label": "Interior",
+          "value": "Lantai Vinyl Antibakteri, Bangku Pengantar (Lengkap dengan Seatbelt)"
+        },
+        {
+          "label": "Peralatan Medis + Regulator Flow Meter",
+          "value": "Stretcher (Bed Pasien), Base Landasan, Rel Kuncian dan Stopper, Gantungan Infus, Oksigen Regulator Flow Meter dan Bracket, Kotak P3K"
+        },
+        {
+          "label": "Keselamatan",
+          "value": "APAR 1 Kg dan Bracket"
+        },
+        { "label": "Eksterior", "value": "Branding Sticker, Bumper Stainless" }
+      ]
+    },
+    "features": [
+      "Fungsianalitas 3-in-1: Jemaah Sakit, Pemulihan, Pengantaran Jenazah.",
+      "Siap Pakai(Ready For Duty): Peralatan Medis Inti Terinstalasi Standar.",
+      "Investasi Efisien: Tepat Guna & Hemat Anggaran"
+    ],
+    "equipment": [
+      {
+        "name": "Ranjang Strecher",
+        "notes": "Memudahkan evakuasi dan transportasi pasien."
+      },
+      {
+        "name": "Set Oksigen + Regulator Flow Meter",
+        "notes": "Menyediakan suplai oksigen saat penanganan pasien."
+      },
+      {
+        "name": "Lantai Vinyl Anti Bakteri",
+        "notes": "Higienis, tahan air, dan mudah dibersihkan."
+      },
+      {
+        "name": "keranda & Kanin Borditi",
+        "notes": "Perlengkapan transportasi jenazah yang rapi dan aman."
+      }
+    ],
+    "advantages": [
+      "Fungsianalitas 3-in-1: Jemaah Sakit, Pemulihan, Pengantaran Jenazah.",
+      "Siap Pakai(Ready For Duty): Peralatan Medis Inti Terinstalasi Standar.",
+      "Investasi Efisien: Tepat Guna & Hemat Anggaran"
+    ],
+    "useCases": [
+      "Rujukan terjadwal",
+      "Pemindahan pasien non-gawat darurat",
+      "Operasional medis rutin"
+    ],
+    "faq": [
+      {
+        "question": "Apakah bisa custom warna interior?",
+        "answer": "Bisa. Kami menyediakan opsi material dan warna sesuai preferensi dan kebutuhan medis."
+      },
+      {
+        "question": "Estimasi waktu pengerjaan?",
+        "answer": "Rata-rata 30–45 hari kerja tergantung tingkat kustomisasi."
+      }
+    ],
+    "testimonial": {
+      "name": "Tim Medis Rumah Sakit",
+      "role": "Pengadaan Kendaraan Medis",
+      "quote": "Kami mendapatkan unit dengan finishing premium dan layout yang sangat membantu operasional di lapangan."
+    },
+    "related": ["ambulans-igd", "ambulans-icu"],
+    "downloadBrochureLabel": "Unduh Brosur Ambulans Transport",
+    "downloadBrochureUrl": "https://example.com/brosur/ambulans-transport.pdf",
+    "whatsappText": "Halo Karoseri Ambulans, saya tertarik dengan ${name}. Mohon info spesifikasi dan penawaran."
+  },
+  {
+    "slug": "ambulans-jenazah-spesial",
+    "category": "Mobil Jenazah",
+    "name": "Ambulance Jenazah Spesial",
+    "shortDescription": "Ambulans multifungsi dengan perlengkapan lebih lengkap, dirancang untuk mendukung berbagai kebutuhan pelayanan medis secara aman dan profesional.",
+    "startingPrice": 250000000,
+    "highlights": [
+      "Sasis dan integrasi standar yang rapi",
+      "Material interior mudah dibersihkan",
+      "Sistem HV`AC dou`ble blower"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1587732606368-80e9275031b2?q=80&w=1600&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1581092919535-1f9b1f0a1b1a?q=80&w=1600&auto=format&fit=crop"
+    ],
+    "images": {
+      "interior": [
+        "https://images.unsplash.com/photo-1581092919535-1f9b1f0a1b1a?q=80&w=1600&auto=format&fit=crop"
+      ],
+      "exterior": [
+        "https://images.unsplash.com/photo-1587732606368-80e9275031b2?q=80&w=1600&auto=format&fit=crop"
+      ]
+    },
+    "quickSpecs": {
+      "Capacity": "2–3 kru medis",
+      "Chassis": "Sasis standar",
+      "Engine": "Konfigurasi sesuai unit dasar",
+      "Transmission": "Otomatis/Manual (opsional)",
+      "Medical Equipment": "Rangkaian standar medis"
+    },
+    "specTable": {
+      "rows": [
+        {
+          "label": "Kelistrikan",
+          "value": "Lampu Ambulance Dan Sirine Mic, Lampu Sorot Belakang, Lampu Pasien, Lampu Pasien Model Slide"
+        },
+        {
+          "label": "Interior",
+          "value": "Lantai Vinyl Antibakteri, Bangku Pengantar (Lengkap dengan Seatbelt)"
+        },
+        {
+          "label": "Peralatan Medis + Regulator Flow Meter",
+          "value": "Stretcher (Bed Pasien), Base Landasan, Rel Kuncian dan Stopper, Gantungan Infus, Oksigen Regulator Flow Meter dan Bracket, Kotak P3K"
+        },
+        {
+          "label": "Keselamatan",
+          "value": "APAR 1 Kg dan Bracket"
+        },
+        { "label": "Eksterior", "value": "Branding Sticker, Bumper Stainless" }
+      ]
+    },
+    "features": [
+      "Fungsianalitas 3-in-1: Jemaah Sakit, Pemulihan, Pengantaran Jenazah.",
+      "Siap Pakai(Ready For Duty): Peralatan Medis Inti Terinstalasi Standar.",
+      "Investasi Efisien: Tepat Guna & Hemat Anggaran"
+    ],
+    "equipment": [
+      {
+        "name": "Ranjang Strecher",
+        "notes": "Memudahkan evakuasi dan transportasi pasien."
+      },
+      {
+        "name": "Set Oksigen + Regulator Flow Meter",
+        "notes": "Menyediakan suplai oksigen saat penanganan pasien."
+      },
+      {
+        "name": "Lantai Vinyl Anti Bakteri",
+        "notes": "Higienis, tahan air, dan mudah dibersihkan."
+      },
+      {
+        "name": "keranda & Kanin Borditi",
+        "notes": "Perlengkapan transportasi jenazah yang rapi dan aman."
+      }
+    ],
+    "advantages": [
+      "Fungsianalitas 3-in-1: Jemaah Sakit, Pemulihan, Pengantaran Jenazah.",
+      "Siap Pakai(Ready For Duty): Peralatan Medis Inti Terinstalasi Standar.",
+      "Investasi Efisien: Tepat Guna & Hemat Anggaran"
+    ],
+    "useCases": [
+      "Rujukan terjadwal",
+      "Pemindahan pasien non-gawat darurat",
+      "Operasional medis rutin"
+    ],
+    "faq": [
+      {
+        "question": "Apakah bisa custom warna interior?",
+        "answer": "Bisa. Kami menyediakan opsi material dan warna sesuai preferensi dan kebutuhan medis."
+      },
+      {
+        "question": "Estimasi waktu pengerjaan?",
+        "answer": "Rata-rata 30–45 hari kerja tergantung tingkat kustomisasi."
+      }
+    ],
+    "testimonial": {
+      "name": "Tim Medis Rumah Sakit",
+      "role": "Pengadaan Kendaraan Medis",
+      "quote": "Kami mendapatkan unit dengan finishing premium dan layout yang sangat membantu operasional di lapangan."
+    },
+    "related": ["ambulans-igd", "ambulans-icu"],
+    "downloadBrochureLabel": "Unduh Brosur Ambulans Transport",
+    "downloadBrochureUrl": "https://example.com/brosur/ambulans-transport.pdf",
     "whatsappText": "Halo Karoseri Ambulans, saya tertarik dengan ${name}. Mohon info spesifikasi dan penawaran."
   }
 ]

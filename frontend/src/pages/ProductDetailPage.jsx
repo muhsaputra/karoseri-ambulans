@@ -38,9 +38,9 @@ export default function ProductDetailPage() {
 
   if (!product) {
     return (
-      <div className="bg-slate-50 min-h-screen">
+      <div className="bg-slate-50 min-h-screen pt-28 sm:pt-32">
         <Seo title="Produk tidak ditemukan" />
-        <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8">
+        <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8">
           <div className="flex items-center gap-3">
             <button
               onClick={() => navigate(-1)}
@@ -74,11 +74,6 @@ export default function ProductDetailPage() {
 
   return (
     <div className="bg-white">
-      <Seo
-        title={product.name}
-        description={`${product.shortDescription} Harga mulai ${formatPriceIDR(product.startingPrice)}.`}
-      />
-
       <div className="relative">
         <motion.div
           initial={{ opacity: 0 }}
@@ -90,51 +85,39 @@ export default function ProductDetailPage() {
       </div>
 
       <main className="mx-auto max-w-7xl px-5 pb-28 sm:px-8">
-        <section className="mt-12">
+        {/* <section className="mt-12">
           <SpecificationGrid product={product} />
-        </section>
-
+        </section> */}
         <section className="mt-14">
           <FeatureSection
             title="Feature Highlights"
             features={product.features}
           />
         </section>
-
+        {/* Interior Gallery
         <section className="mt-14">
           <GallerySection
             title="Interior Gallery"
             images={product.images?.interior ?? product.gallery}
           />
-        </section>
-
-        <section className="mt-14">
+        </section> */}
+        {/*  */}
+        {/* <section className="mt-14">
           <GallerySection
             title="Exterior Gallery"
             images={product.images?.exterior ?? product.gallery}
           />
-        </section>
+        </section> */}
 
         <section className="mt-14">
           <EquipmentSection equipments={product.equipment} />
         </section>
-
         <section className="mt-14">
           <TechnicalTable rows={product?.specTable?.rows ?? []} />
         </section>
-
-        <section className="mt-14">
-          <FeatureSection
-            title="Product Advantages"
-            features={product.advantages}
-            dense
-          />
-        </section>
-
-        <section className="mt-14">
+        {/* <section className="mt-14">
           <FeatureSection title="Use Cases" features={product.useCases} />
-        </section>
-
+        </section> */}
         <section className="mt-14">
           <RelatedProducts products={related} />
         </section>

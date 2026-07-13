@@ -27,8 +27,7 @@ export default function StickyConsultation({ product }) {
                 Siap Diskusi?
               </p>
               <p className="mt-1 text-sm font-bold text-[#071b3b]">
-                {product?.name} • Mulai{" "}
-                {formatCurrencyIDR(product?.startingPrice || 0)}
+                {product?.name}
               </p>
             </div>
 

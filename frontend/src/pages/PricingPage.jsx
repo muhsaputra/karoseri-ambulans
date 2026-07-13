@@ -19,41 +19,21 @@ const PLANS = [
     name: "Transport Unit",
     price: "Ambulance Medis",
     desc: "Solusi efisien untuk pemindahan pasien non-gawat darurat.",
-    features: [
-      "Sasis Standar",
-      "Interior Fiber",
-      "Lampu Rotator",
-      "Dokumen Legalitas",
-      "Sertifikasi Kemenkes",
-    ],
+    features: [],
     highlight: false,
   },
   {
     name: "Transport Unit",
-    price: "Mobil Jenazah",
+    price: "Ambulance Jenazah",
     desc: "Standar operasional rumah sakit untuk penanganan kondisi kritis.",
-    features: [
-      "Stretcher Scoop",
-      "Oxygen System",
-      "Sirene Multi-Tone",
-      "Intercom System",
-      "Lampu Tindakan",
-      "Peralatan Medis Dasar",
-    ],
+    features: [],
     highlight: true,
   },
   {
     name: "Part Tambahan",
-    price: "Ambulance",
+    price: "Ambulance Multifungsi",
     desc: "Mobile ICU dengan teknologi medis terkini untuk pasien intensif.",
-    features: [
-      "Ventilator",
-      "Patient Monitor",
-      "Defibrillator",
-      "Custom Layout",
-      "Priority Support",
-      "Setup Lengkap",
-    ],
+    features: [],
     highlight: false,
   },
 ];
@@ -142,7 +122,7 @@ export default function PricingPage() {
               </div>
               <p className="text-slate-500 text-sm mb-8">{plan.desc}</p>
 
-              <ul className="mb-8 space-y-4 border-y border-slate-100 py-6">
+              {/* <ul className="mb-8 space-y-4 border-y border-slate-100 py-6">
                 {plan.features.map((feature, idx) => (
                   <li
                     key={idx}
@@ -152,7 +132,7 @@ export default function PricingPage() {
                     {feature}
                   </li>
                 ))}
-              </ul>
+              </ul> */}
 
               <a
                 href={`https://wa.me/6281234567890?text=Halo%20Karoseri%20Ambulans%2C%20saya%20ingin%20meminta%20penawaran%20formal%20untuk%20${encodeURIComponent(plan.name)}.`}

@@ -98,8 +98,8 @@ const Home = () => {
               </div>
             </div>
           </section>
-          <ProductSection />
-          <PortfolioSection />
+          {/* <ProductSection /> */}
+          {/* <PortfolioSection /> */}
           {/* <SocialProofSection /> */}
           <BlogSection />
           <section className="border-y border-slate-100 bg-slate-50 py-20 px-5 sm:px-8">

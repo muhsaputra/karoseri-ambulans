@@ -43,16 +43,16 @@ export default function ProductCard({ product }) {
           {desc}
         </p>
 
-        <div className="mt-5 flex items-center justify-between rounded-2xl bg-slate-50 border border-slate-200 px-4 py-3">
+        {/* <div className="mt-5 flex items-center justify-between rounded-2xl bg-slate-50 border border-slate-200 px-4 py-3">
           <p className="text-xs font-bold uppercase tracking-[0.18em] text-slate-500">
             Mulai dari
           </p>
           <p className="text-lg font-extrabold text-[#071b3b]">
             {formatCurrencyIDR(startPrice)}
           </p>
-        </div>
+        </div> */}
 
-        <div className="mt-5">
+        {/* <div className="mt-5">
           <p className="text-xs font-bold uppercase tracking-[0.18em] text-slate-500">
             3 Key Highlights
           </p>
@@ -67,7 +67,7 @@ export default function ProductCard({ product }) {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
 
         <div className="mt-7 grid grid-cols-1 gap-3 sm:grid-cols-2">
           <Link

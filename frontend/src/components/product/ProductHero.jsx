@@ -74,7 +74,7 @@ export default function ProductHero({ product }) {
               </p>
 
               <div className="mt-7">
-                <ProductPricing startingPrice={product.startingPrice} />
+                {/* <ProductPricing startingPrice={product.startingPrice} /> */}
               </div>
 
               <div className="mt-8 grid grid-cols-1 gap-3">
@@ -88,19 +88,9 @@ export default function ProductHero({ product }) {
                   CTA WhatsApp
                   <MdOutlineKeyboardArrowRight className="transition-transform group-hover:translate-x-1" />
                 </a>
-
-                <a
-                  href={product.downloadBrochureUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center justify-center gap-2 rounded-2xl border border-slate-200 bg-white px-6 py-4 font-bold text-[#071b3b] shadow-sm transition-all hover:border-red-200 hover:text-red-600"
-                >
-                  <MdDownload />
-                  {product.downloadBrochureLabel}
-                </a>
               </div>
 
-              <div className="mt-8 grid grid-cols-3 gap-3">
+              {/* <div className="mt-8 grid grid-cols-3 gap-3">
                 {product.highlights.slice(0, 3).map((h, idx) => (
                   <div
                     key={idx}
@@ -109,7 +99,7 @@ export default function ProductHero({ product }) {
                     {h}
                   </div>
                 ))}
-              </div>
+              </div> */}
 
               <p className="mt-6 text-xs font-bold text-slate-500">
                 Harga mulai dapat berubah sesuai konfigurasi & kebutuhan.

@@ -67,7 +67,7 @@ export default function ProductPage() {
   const [showAllProducts, setShowAllProducts] = useState(false);
   const visibleProducts = showAllProducts
     ? filteredProducts
-    : filteredProducts.slice(0, 6);
+    : filteredProducts.slice(0, 3);
 
   return (
     <div className="bg-slate-50 min-h-screen">
