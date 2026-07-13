@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 // Migrasi ke react-icons/lu agar sinkron dengan Navbar & Footer
 import { LuShieldCheck, LuAward, LuWrench, LuUsers } from "react-icons/lu";
-import AboutImage from "../assets/workshop-ambulans.webp";
+import AboutImage from "../assets/img/Home.webp";
 
 const FEATURES = [
   {

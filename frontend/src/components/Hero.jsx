@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import HeroImage from "../assets/hero-ambulans.webp";
+import HeroImage from "../assets/img/Beranda.webp";
 import { Link } from "react-router-dom";
 
 const STATS = [

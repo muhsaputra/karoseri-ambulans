@@ -21,6 +21,8 @@ const SocialProofSection = lazy(() =>
   })),
 );
 
+const BlogSection = lazy(() => import("../components/BlogSection"));
+
 import {
   MdDesignServices,
   MdConstruction,
@@ -99,6 +101,7 @@ const Home = () => {
           <ProductSection />
           <PortfolioSection />
           {/* <SocialProofSection /> */}
+          <BlogSection />
           <section className="border-y border-slate-100 bg-slate-50 py-20 px-5 sm:px-8">
             <div className="max-w-7xl mx-auto">
               <div className="text-center mb-16">
