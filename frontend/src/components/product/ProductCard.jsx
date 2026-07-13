@@ -74,7 +74,7 @@ export default function ProductCard({ product }) {
             to={`/produk/${product.slug}`}
             className="inline-flex items-center justify-center gap-2 rounded-2xl border border-slate-200 bg-white px-5 py-3 font-bold text-[#071b3b] transition-all hover:border-red-200 hover:text-red-600"
           >
-            Detail Produk
+            Detail
             <MdArrowForward />
           </Link>
 
@@ -84,7 +84,7 @@ export default function ProductCard({ product }) {
             rel="noreferrer"
             className="inline-flex items-center justify-center gap-2 rounded-2xl bg-[#071b3b] px-5 py-3 font-bold text-white transition-all hover:bg-red-600"
           >
-            Konsultasi WhatsApp
+            Konsultasi
           </a>
         </div>
       </div>

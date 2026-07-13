@@ -66,6 +66,8 @@ export function getProductBySlug(slug: string): Product | undefined {
 }
 
 export function getRelatedProducts(product: Product): Product[] {
-  const related = new Set(product.related);
-  return products.filter((p) => related.has(p.slug) && p.slug !== product.slug);
+  const relatedSlugs = product.related ?? [];
+  return relatedSlugs
+    .map((slug) => products.find((p) => p.slug === slug))
+    .filter(Boolean) as Product[];
 }

@@ -15,7 +15,7 @@ import Seo from "../components/Seo";
 import { getProducts } from "../data/products";
 import ProductCard from "../components/product/ProductCard";
 
-const CATEGORIES = ["Semua", "Ambulance"];
+const CATEGORIES = ["Semua", "Ambulance", "Mobil Jenazah", "Mobil Multifungsi"];
 
 // --- Sub-components for Professional Layout ---
 

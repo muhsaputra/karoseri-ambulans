@@ -120,7 +120,7 @@ export default function ProductDetailPage() {
         </section>
 
         <section className="mt-14">
-          <TechnicalTable rows={product.specTable.rows} />
+          <TechnicalTable rows={product?.specTable?.rows ?? []} />
         </section>
 
         <section className="mt-14">
@@ -133,27 +133,6 @@ export default function ProductDetailPage() {
 
         <section className="mt-14">
           <FeatureSection title="Use Cases" features={product.useCases} />
-        </section>
-
-        <section className="mt-14">
-          <FAQSection faqs={product.faq} />
-        </section>
-
-        <section className="mt-14">
-          <div className="rounded-[2rem] border border-slate-200 bg-slate-50 p-8 md:p-12 shadow-sm">
-            <p className="text-xs font-bold uppercase tracking-[0.22em] text-red-600">
-              Customer Testimonial
-            </p>
-            <h3 className="mt-3 text-3xl font-extrabold text-[#071b3b]">
-              {product.testimonial.name}
-            </h3>
-            <p className="mt-1 text-sm font-bold text-slate-600">
-              {product.testimonial.role}
-            </p>
-            <p className="mt-5 text-slate-600 leading-relaxed">
-              “{product.testimonial.quote}”
-            </p>
-          </div>
         </section>
 
         <section className="mt-14">

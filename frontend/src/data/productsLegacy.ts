@@ -13,3 +13,4 @@ export const legacyProducts = [
     highlights: ["Sasis Standar", "Interior Fiber", "AC Double Blower"],
   },
 ];
+s;
