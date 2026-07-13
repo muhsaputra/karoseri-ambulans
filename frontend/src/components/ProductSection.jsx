@@ -42,6 +42,7 @@ const PRODUCTS = [
 
 export default function ProductGallery() {
   const [selectedProduct, setSelectedProduct] = useState(null);
+  const [showAll, setShowAll] = useState(false);
 
   return (
     <section className="w-full py-24 bg-slate-50">
@@ -57,7 +58,7 @@ export default function ProductGallery() {
 
         {/* Gallery Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {PRODUCTS.map((product, i) => (
+          {(showAll ? PRODUCTS : PRODUCTS.slice(0, 3)).map((product, i) => (
             <motion.div
               key={i}
               whileHover={{ y: -10 }}
@@ -83,6 +84,27 @@ export default function ProductGallery() {
             </motion.div>
           ))}
         </div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-8 lg:px-20 mt-10">
+        {!showAll && PRODUCTS.length > 3 && (
+          <button
+            type="button"
+            onClick={() => setShowAll(true)}
+            className="mx-auto block rounded-full bg-[#071b3b] px-8 py-4 font-bold text-white shadow-lg transition-all hover:bg-red-600 hover:shadow-red-500/20"
+          >
+            Lihat Lebih Banyak
+          </button>
+        )}
+        {showAll && PRODUCTS.length > 3 && (
+          <button
+            type="button"
+            onClick={() => setShowAll(false)}
+            className="mx-auto block rounded-full bg-slate-100 px-8 py-4 font-bold text-[#071b3b] shadow-sm ring-1 ring-slate-200 transition-all hover:bg-slate-50"
+          >
+            Lihat Lebih Sedikit
+          </button>
+        )}
       </div>
 
       {/* Detail Modal (Overlay) */}

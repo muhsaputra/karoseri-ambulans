@@ -179,6 +179,11 @@ export default function ProductPage() {
       ? PRODUCTS
       : PRODUCTS.filter((p) => p.category === activeCategory);
 
+  const [showAllProducts, setShowAllProducts] = useState(false);
+  const visibleProducts = showAllProducts
+    ? filteredProducts
+    : filteredProducts.slice(0, 3);
+
   return (
     <div className="bg-slate-50 min-h-screen">
       <Seo title="Katalog Produk" />
@@ -231,7 +236,7 @@ export default function ProductPage() {
                 </p>
               </div>
             ) : (
-              filteredProducts.map((product, index) => (
+              visibleProducts.map((product, index) => (
                 <motion.div
                   layout
                   initial={{ opacity: 0, y: 20 }}
@@ -287,7 +292,7 @@ export default function ProductPage() {
                         Detail unit
                       </button>
                       <a
-                        href={`https://wa.me/6281234567890?text=Halo%20Karoseri%20Ambulans%2C%20saya%20tertarik%20dengan%20${encodeURIComponent(product.title)}.`}
+                        href={`https://wa.me/628111222183?text=Halo%20Karoseri%20Ambulans%2C%20saya%20tertarik%20dengan%20${encodeURIComponent(product.title)}.`}
                         target="_blank"
                         rel="noreferrer"
                         className="flex items-center justify-center gap-1 rounded-2xl bg-[#071b3b] py-3.5 text-sm font-bold text-white transition-all hover:bg-red-600"
@@ -301,6 +306,30 @@ export default function ProductPage() {
             )}
           </AnimatePresence>
         </motion.div>
+
+        {!showAllProducts && filteredProducts.length > 3 && (
+          <div className="mt-10 flex justify-center">
+            <button
+              type="button"
+              onClick={() => setShowAllProducts(true)}
+              className="rounded-full bg-[#071b3b] px-10 py-4 font-bold text-white shadow-lg transition-all hover:bg-red-600 hover:shadow-red-500/20"
+            >
+              Lihat Lebih Banyak
+            </button>
+          </div>
+        )}
+
+        {showAllProducts && filteredProducts.length > 3 && (
+          <div className="mt-10 flex justify-center">
+            <button
+              type="button"
+              onClick={() => setShowAllProducts(false)}
+              className="rounded-full bg-slate-100 px-10 py-4 font-bold text-[#071b3b] shadow-sm ring-1 ring-slate-200 transition-all hover:bg-slate-50"
+            >
+              Lihat Lebih Sedikit
+            </button>
+          </div>
+        )}
       </div>
 
       <section className="bg-white px-5 py-24 sm:px-8">
