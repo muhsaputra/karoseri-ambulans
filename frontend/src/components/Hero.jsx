@@ -109,7 +109,7 @@ export default function HeroSection() {
               Lihat Katalog Unit
             </Link>
             <a
-              href="https://wa.me/6281234567890?text=Halo%20Karoseri%20Ambulans%2C%20saya%20ingin%20konsultasi%20teknis."
+              href="http://wa.me/6285178496746?text=Halo%20Karoseri%20Ambulans%2C%20saya%20ingin%20konsultasi%20teknis."
               target="_blank"
               rel="noreferrer"
               className="rounded-full border border-white/30 px-8 py-4 text-center font-bold text-white transition-all hover:border-white hover:bg-white/10 active:scale-95"

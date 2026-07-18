@@ -93,7 +93,7 @@ export default function ContactPage() {
               </div>
               <div className="pt-6 border-t border-slate-800">
                 <a
-                  href="https://wa.me/628111222183"
+                  href="http://wa.me/6285178496746"
                   className="flex items-center gap-3 font-bold text-red-300 transition-colors hover:text-white"
                 >
                   <MdPhone /> Chat via WhatsApp

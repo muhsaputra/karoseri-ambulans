@@ -338,7 +338,7 @@ export default function BlogDetail() {
                   <FaLink /> Salin tautan
                 </button>
                 <a
-                  href={`https://wa.me/?text=${window.location.href}`}
+                  href={`http://wa.me/6285178496746?text=${window.location.href}`}
                   target="_blank"
                   rel="noreferrer"
                   className="flex items-center justify-center gap-2 rounded-full bg-green-500 px-4 py-3 font-semibold text-white transition hover:bg-green-600"

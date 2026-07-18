@@ -25,7 +25,7 @@ export default function ProductHero({ product }) {
         );
   }, [product]);
 
-  const whatsappHref = `https://wa.me/628111222183?text=${encodeURIComponent(
+  const whatsappHref = `http://wa.me/6285178496746?text=${encodeURIComponent(
     (product.whatsappText || "").replace("${name}", product.name),
   )}`;
 

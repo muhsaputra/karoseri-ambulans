@@ -212,7 +212,7 @@ export default function ProductPage() {
           Anda.
         </p>
         <a
-          href="https://wa.me/6281234567890?text=Halo%20Karoseri%20Ambulans%2C%20saya%20ingin%20konsultasi%20Custom%20Build."
+          href="http://wa.me/6285178496746?text=Halo%20Karoseri%20Ambulans%2C%20saya%20ingin%20konsultasi%20Custom%20Build."
           target="_blank"
           rel="noreferrer"
           className="inline-flex rounded-full bg-red-600 px-10 py-4 font-bold shadow-lg shadow-red-950/30 transition-all hover:scale-105 hover:bg-red-500"

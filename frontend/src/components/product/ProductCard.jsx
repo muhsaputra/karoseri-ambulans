@@ -9,7 +9,7 @@ export default function ProductCard({ product }) {
   const startPrice =
     typeof product.startingPrice === "number" ? product.startingPrice : 0;
 
-  const whatsappHref = `https://wa.me/628111222183?text=${encodeURIComponent(
+  const whatsappHref = `http://wa.me/6285178496746?text=${encodeURIComponent(
     (product.whatsappText || "").replace("${name}", product.name),
   )}`;
 

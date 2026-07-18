@@ -88,7 +88,7 @@ const Home = () => {
                   Anda.
                 </p>
                 <a
-                  href="https://wa.me/6281234567890?text=Halo%20Karoseri%20Ambulans%2C%20saya%20ingin%20konsultasi%20Custom%20Build."
+                  href="http://wa.me/6285178496746?text=Halo%20Karoseri%20Ambulans%2C%20saya%20ingin%20konsultasi%20Custom%20Build."
                   target="_blank"
                   rel="noreferrer"
                   className="inline-flex items-center justify-center rounded-full bg-red-600 px-8 py-4 font-bold shadow-lg shadow-red-950/30 transition-all hover:-translate-y-1 hover:bg-red-500 focus:outline-none focus:ring-4 focus:ring-red-400/30"

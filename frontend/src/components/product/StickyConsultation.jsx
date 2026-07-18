@@ -10,7 +10,7 @@ export default function StickyConsultation({ product }) {
       "${name}",
       product?.name || "",
     );
-    return `https://wa.me/628111222183?text=${encodeURIComponent(text)}`;
+    return `http://wa.me/6285178496746?text=${encodeURIComponent(text)}`;
   }, [product]);
 
   return (

@@ -204,7 +204,7 @@ export default function ServicesPage() {
               siap memberikan solusi karoseri yang tepat guna dan efisien.
             </p>
             <a
-              href="https://wa.me/6281234567890?text=Halo%20Karoseri%20Ambulans%2C%20saya%20ingin%20konsultasi%20layanan%20kustom."
+              href="http://wa.me/6285178496746?text=Halo%20Karoseri%20Ambulans%2C%20saya%20ingin%20konsultasi%20layanan%20kustom."
               target="_blank"
               rel="noreferrer"
               className="inline-flex rounded-full bg-red-600 px-8 py-4 font-bold text-white transition-colors hover:bg-red-500"
@@ -269,7 +269,7 @@ export default function ServicesPage() {
                 ))}
               </ul>
               <a
-                href={`https://wa.me/6281234567890?text=Halo%20Karoseri%20Ambulans%2C%20saya%20ingin%20mendiskusikan%20${encodeURIComponent(selectedService.title)}.`}
+                href={`http://wa.me/6285178496746?text=Halo%20Karoseri%20Ambulans%2C%20saya%20ingin%20mendiskusikan%20${encodeURIComponent(selectedService.title)}.`}
                 target="_blank"
                 rel="noreferrer"
                 className="mt-8 flex items-center justify-center gap-2 rounded-xl bg-red-600 py-3.5 font-bold text-white transition-colors hover:bg-red-700"

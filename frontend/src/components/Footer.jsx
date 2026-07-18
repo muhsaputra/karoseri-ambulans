@@ -55,18 +55,28 @@ const Footer = () => {
           {/* Column 3: Produk */}
           <div className="space-y-4">
             <h4 className="text-white font-bold uppercase tracking-widest text-xs">
-              Layanan
+              Sosial Media
             </h4>
             <ul className="space-y-2">
               {[
-                "Ambulans Transport",
-                "Ambulans Gawat Darurat",
-                "Mobile ICU",
-                "Kustomisasi",
+                {
+                  name: "Instagram",
+                  url: "https://www.instagram.com/karoseriambulans/",
+                },
+                {
+                  name: "Facebook",
+                  url: "https://www.facebook.com/profile.php?id=61590789214174&locale=id_ID",
+                },
+                { name: "WhatsApp", url: "http://wa.me/6285178496746" },
               ].map((item) => (
-                <li key={item}>
-                  <a href="#" className="transition-colors hover:text-red-400">
-                    {item}
+                <li key={item.name}>
+                  <a
+                    href={item.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="transition-colors hover:text-red-400"
+                  >
+                    {item.name}
                   </a>
                 </li>
               ))}

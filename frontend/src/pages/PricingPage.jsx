@@ -135,7 +135,7 @@ export default function PricingPage() {
               </ul> */}
 
               <a
-                href={`https://wa.me/6281234567890?text=Halo%20Karoseri%20Ambulans%2C%20saya%20ingin%20meminta%20penawaran%20formal%20untuk%20${encodeURIComponent(plan.name)}.`}
+                href={`http://wa.me/6285178496746?text=Halo%20Karoseri%20Ambulans%2C%20saya%20ingin%20meminta%20penawaran%20formal%20untuk%20${encodeURIComponent(plan.name)}.`}
                 target="_blank"
                 rel="noreferrer"
                 className={`mt-auto flex w-full items-center justify-center rounded-2xl py-4 font-bold transition-all ${
@@ -207,7 +207,7 @@ export default function PricingPage() {
               Dapatkan detail spesifikasi lengkap dalam format PDF.
             </p>
             <a
-              href="https://wa.me/6281234567890?text=Halo%20Karoseri%20Ambulans%2C%20saya%20ingin%20mendapatkan%20katalog%20dan%20daftar%20harga."
+              href="http://wa.me/6285178496746?text=Halo%20Karoseri%20Ambulans%2C%20saya%20ingin%20mendapatkan%20katalog%20dan%20daftar%20harga."
               target="_blank"
               rel="noreferrer"
               className="flex items-center gap-2 rounded-full bg-red-600 px-6 py-3 font-bold text-white transition-colors hover:bg-red-500"

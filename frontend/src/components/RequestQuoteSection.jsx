@@ -14,7 +14,7 @@ export default function RequestQuoteSection() {
     event.preventDefault();
     const message = `Halo Karoseri Ambulans, saya ${form.name} dari ${form.institution}.%0A%0ATipe unit: ${form.unit}%0ALokasi: ${form.city}%0AKontak: ${form.contact}%0AKebutuhan: ${form.needs}`;
     window.open(
-      `https://wa.me/6281234567890?text=${message}`,
+      `http://wa.me/6285178496746?text=${message}`,
       "_blank",
       "noopener,noreferrer",
     );
