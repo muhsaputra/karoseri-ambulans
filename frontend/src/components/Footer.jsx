@@ -68,6 +68,10 @@ const Footer = () => {
                   url: "https://www.facebook.com/profile.php?id=61590789214174&locale=id_ID",
                 },
                 { name: "WhatsApp", url: "http://wa.me/6285178496746" },
+                {
+                  name: "Tiktok",
+                  url: "https://www.tiktok.com/@karoseri_ambulans",
+                },
               ].map((item) => (
                 <li key={item.name}>
                   <a
@@ -94,7 +98,7 @@ const Footer = () => {
                 Banten Lestari Serang, Banten
               </li>
               <li className="flex items-center gap-3">
-                <MdPhone className="text-red-500" /> +62 811-1222-183
+                <MdPhone className="text-red-500" /> +62 8517-8496-746
               </li>
               <li className="flex items-center gap-3">
                 <MdEmail className="text-red-500" />{" "}
