@@ -318,9 +318,9 @@ export default function BlogDetail() {
                   ),
                 }}
                 modifiers={{
-                  link: ({ children, url }) => (
+                  link: ({ children, node }) => (
                     <a
-                      href={url}
+                      href={node.url}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="font-semibold text-red-600 underline transition hover:text-red-700"
