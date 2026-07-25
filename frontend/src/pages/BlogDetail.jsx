@@ -318,12 +318,12 @@ export default function BlogDetail() {
                   ),
                 }}
                 modifiers={{
-                  link: ({ children, node }) => (
+                  link: ({ children, url }) => (
                     <a
-                      href={node.url}
+                      href={url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="font-semibold text-red-600 underline transition hover:text-red-700"
+                      className="font-semibold !text-red-600 underline transition hover:!text-red-700"
                     >
                       {children}
                     </a>
