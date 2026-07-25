@@ -277,49 +277,59 @@ export default function BlogDetail() {
               </div>
             )}
 
-            <div className="prose prose-lg prose-slate mt-10 max-w-none prose-headings:mt-8 prose-headings:font-extrabold prose-headings:text-slate-900 prose-p:leading-8 prose-p:text-slate-600 prose-img:my-8 prose-img:rounded-[24px] prose-a:text-red-600 prose-blockquote:rounded-r-2xl prose-blockquote:border-l-red-500 prose-blockquote:bg-red-50 prose-blockquote:px-4 prose-blockquote:py-3 prose-blockquote:text-slate-700">
-              <article className="prose prose-lg prose-slate max-w-none">
-                <BlocksRenderer
-                  content={article.Content}
-                  blocks={{
-                    heading: ({ level, children }) => {
-                      switch (level) {
-                        case 1:
-                          return (
-                            <h1 className="mb-4 mt-8 text-4xl font-extrabold text-slate-900">
-                              {children}
-                            </h1>
-                          );
-                        case 2:
-                          return (
-                            <h2 className="mb-4 mt-8 text-3xl font-bold text-slate-900">
-                              {children}
-                            </h2>
-                          );
-                        case 3:
-                          return (
-                            <h3 className="mb-3 mt-6 text-2xl font-semibold text-slate-900">
-                              {children}
-                            </h3>
-                          );
-                        default:
-                          return (
-                            <h2 className="mb-4 mt-8 text-3xl font-bold text-slate-900">
-                              {children}
-                            </h2>
-                          );
-                      }
-                    },
-                    image: ({ image }) => (
-                      <img
-                        src={getMediaUrl(image.url)}
-                        alt={image.alternativeText || "Article image"}
-                        className="my-8 w-full rounded-3xl shadow-md"
-                      />
-                    ),
-                  }}
-                />
-              </article>
+            <div className="prose prose-lg prose-slate mt-10 max-w-none prose-headings:mt-8 prose-headings:font-extrabold prose-headings:text-slate-900 prose-p:leading-8 prose-p:text-slate-600 prose-img:my-8 prose-img:rounded-[24px] prose-blockquote:rounded-r-2xl prose-blockquote:border-l-red-500 prose-blockquote:bg-red-50 prose-blockquote:px-4 prose-blockquote:py-3 prose-blockquote:text-slate-700">
+              <BlocksRenderer
+                content={article.Content}
+                blocks={{
+                  heading: ({ level, children }) => {
+                    switch (level) {
+                      case 1:
+                        return (
+                          <h1 className="mb-4 mt-8 text-4xl font-extrabold text-slate-900">
+                            {children}
+                          </h1>
+                        );
+                      case 2:
+                        return (
+                          <h2 className="mb-4 mt-8 text-3xl font-bold text-slate-900">
+                            {children}
+                          </h2>
+                        );
+                      case 3:
+                        return (
+                          <h3 className="mb-3 mt-6 text-2xl font-semibold text-slate-900">
+                            {children}
+                          </h3>
+                        );
+                      default:
+                        return (
+                          <h2 className="mb-4 mt-8 text-3xl font-bold text-slate-900">
+                            {children}
+                          </h2>
+                        );
+                    }
+                  },
+                  image: ({ image }) => (
+                    <img
+                      src={getMediaUrl(image.url)}
+                      alt={image.alternativeText || "Article image"}
+                      className="my-8 w-full rounded-3xl shadow-md"
+                    />
+                  ),
+                }}
+                modifiers={{
+                  link: ({ children, url }) => (
+                    <a
+                      href={url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-semibold text-red-600 underline transition hover:text-red-700"
+                    >
+                      {children}
+                    </a>
+                  ),
+                }}
+              />
             </div>
           </motion.article>
 
