@@ -1,8 +1,8 @@
 [
   {
     "slug": "ambulans-medis-ekonomis",
-    "category": "Ambulance",
-    "name": "Ambulance Medis Ekonomis",
+    "category": "Ambulans",
+    "name": "Ambulans Medis Ekonomis",
     "shortDescription": "Unit standar pemindahan pasien non-gawat darurat dengan kenyamanan maksimal.",
     "startingPrice": 250000000,
     "highlights": [
@@ -105,8 +105,8 @@
   },
   {
     "slug": "ambulans-medis-spesial",
-    "category": "Ambulance",
-    "name": "Ambulance Medis Spesial",
+    "category": "Ambulans",
+    "name": "Ambulans Medis Spesial",
     "shortDescription": "Ambulans dengan perlengkapan medis lengkap, dirancang untuk memberikan pelayanan kesehatan yang aman, nyaman, dan siap operasional.",
     "startingPrice": 250000000,
     "highlights": [
@@ -210,7 +210,7 @@
   {
     "slug": "ambulans-jenazah-ekonomis",
     "category": "Mobil Jenazah",
-    "name": "Ambulance Jenazah Ekonomis",
+    "name": "Ambulans Jenazah Ekonomis",
     "shortDescription": "Ambulans jenazah dengan perlengkapan standar, dirancang untuk memberikan layanan transportasi jenazah yang aman, rapi, dan ekonomis.",
     "startingPrice": 250000000,
     "highlights": [
@@ -314,7 +314,7 @@
   {
     "slug": "ambulans-jenazah-spesial",
     "category": "Mobil Jenazah",
-    "name": "Ambulance Jenazah Spesial",
+    "name": "Ambulans Jenazah Spesial",
     "shortDescription": "Ambulans multifungsi dengan perlengkapan lebih lengkap, dirancang untuk mendukung berbagai kebutuhan pelayanan medis secara aman dan profesional.",
     "startingPrice": 250000000,
     "highlights": [
