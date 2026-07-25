@@ -214,7 +214,7 @@
       "role": "Pengadaan Kendaraan Medis",
       "quote": "Kami mendapatkan unit dengan finishing premium dan layout yang sangat membantu operasional di lapangan."
     },
-    "related": ["ambulans-igd", "ambulans-icu"],
+    "related": ["ambulans-jenazah-ekonomis", "ambulans-jenazah-spesial"],
     "downloadBrochureLabel": "Unduh Brosur Ambulans Transport",
     "downloadBrochureUrl": "https://example.com/brosur/ambulans-transport.pdf",
     "whatsappText": "Halo Karoseri Ambulans, saya tertarik dengan ${name}. Mohon info spesifikasi dan penawaran."
@@ -322,7 +322,7 @@
       "role": "Pengadaan Kendaraan Medis",
       "quote": "Kami mendapatkan unit dengan finishing premium dan layout yang sangat membantu operasional di lapangan."
     },
-    "related": ["ambulans-igd", "ambulans-icu"],
+    "related": ["ambulans-medis-ekonomis", "ambulans-medis-spesial"],
     "downloadBrochureLabel": "Unduh Brosur Ambulans Transport",
     "downloadBrochureUrl": "https://example.com/brosur/ambulans-transport.pdf",
     "whatsappText": "Halo Karoseri Ambulans, saya tertarik dengan ${name}. Mohon info spesifikasi dan penawaran."
@@ -430,7 +430,7 @@
       "role": "Pengadaan Kendaraan Medis",
       "quote": "Kami mendapatkan unit dengan finishing premium dan layout yang sangat membantu operasional di lapangan."
     },
-    "related": ["ambulans-igd", "ambulans-icu"],
+    "related": ["ambulans-medis-ekonomis", "ambulans-medis-spesial"],
     "downloadBrochureLabel": "Unduh Brosur Ambulans Transport",
     "downloadBrochureUrl": "https://example.com/brosur/ambulans-transport.pdf",
     "whatsappText": "Halo Karoseri Ambulans, saya tertarik dengan ${name}. Mohon info spesifikasi dan penawaran."
