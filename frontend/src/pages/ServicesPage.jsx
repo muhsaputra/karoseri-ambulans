@@ -46,13 +46,13 @@ const SERVICES = [
     ],
     time: "Mengikuti alur administrasi terkait",
   },
-  {
-    icon: MdSupportAgent,
-    title: "Layanan Purna Jual",
-    desc: "Dukungan teknis berkala dan ketersediaan suku cadang untuk memastikan armada Anda selalu dalam kondisi prima.",
-    scope: ["Konsultasi teknis", "Perawatan berkala", "Dukungan suku cadang"],
-    time: "Setelah unit beroperasi",
-  },
+  // {
+  //   icon: MdSupportAgent,
+  //   title: "Layanan Purna Jual",
+  //   desc: "Dukungan teknis berkala dan ketersediaan suku cadang untuk memastikan armada Anda selalu dalam kondisi prima.",
+  //   scope: ["Konsultasi teknis", "Perawatan berkala", "Dukungan suku cadang"],
+  //   time: "Setelah unit beroperasi",
+  // },
   {
     icon: MdDirectionsCar,
     title: "Modifikasi Khusus",
@@ -60,17 +60,17 @@ const SERVICES = [
     scope: ["Kajian kebutuhan", "Layout custom", "Review konfigurasi"],
     time: "Berdasarkan ruang lingkup modifikasi",
   },
-  {
-    icon: MdVerified,
-    title: "Audit & Sertifikasi",
-    desc: "Setiap unit melalui proses kontrol kualitas ketat dan memastikan kepatuhan terhadap regulasi Kemenkes RI.",
-    scope: [
-      "Quality control",
-      "Checklist keselamatan",
-      "Dokumentasi pengujian",
-    ],
-    time: "Sebelum serah terima unit",
-  },
+  // {
+  //   icon: MdVerified,
+  //   title: "Audit & Sertifikasi",
+  //   desc: "Setiap unit melalui proses kontrol kualitas ketat dan memastikan kepatuhan terhadap regulasi Kemenkes RI.",
+  //   scope: [
+  //     "Quality control",
+  //     "Checklist keselamatan",
+  //     "Dokumentasi pengujian",
+  //   ],
+  //   time: "Sebelum serah terima unit",
+  // },
 ];
 
 export default function ServicesPage() {
